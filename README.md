@@ -1,3 +1,4 @@
-# Gestor App 2025
-## Plataforma para la gestión de sitios comunes
+#GESTOR APP 2025
+## Plataforma para la gestion  de sitios Comunes
+JUAN DIEGO SANCHEZ - WD
 Caren Agudelo
