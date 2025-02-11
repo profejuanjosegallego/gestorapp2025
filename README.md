@@ -1,14 +1,8 @@
-#GESTOR APP 2025
+# React + Vite
 
-## Plataforma para la gestion de sitios Comunes
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-JUAN DIEGO SANCHEZ - WD
-Melissa Beltran
+Currently, two official plugins are available:
 
-ENTREGABLES
-
-1. MODIFICAR EL README.md para incluir recomendaciones de instalacion, uso y proposito de la App
-2. Agregar el componente footer a los Commons
-3. Refactorizar el Diseño del Home(Menu, Baner, Acerca)
-4. Crear Pagina nueva llamada Booking(Incluir en Rutas)
-5. Subir el Desarrollo a Github con una Rama Independiente, haciendo Pull Request
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
