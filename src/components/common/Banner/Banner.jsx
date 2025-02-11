@@ -1,8 +1,7 @@
 import './Banner.css'
-export function Banner(){
+export function Banner() {
 
-    return(
-
+    return (
         <>
             <section className="banner">
                 <h2 className='text-white'>
@@ -10,7 +9,6 @@ export function Banner(){
                     Aplicación para gestión de espacios en tu lugar
                     de descanso...
                 </h2>
-
             </section>
         </>
     )
