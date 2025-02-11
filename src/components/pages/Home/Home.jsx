@@ -7,11 +7,8 @@ export function Home(){
     return(
 
         <>
-
-            <Menu></Menu>
             <Banner></Banner>
             <Acerca></Acerca>
-        
         </>
     )
 
