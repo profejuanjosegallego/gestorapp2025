@@ -1,14 +1,15 @@
 import React from "react";
 import "./Menu.css";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
     return (
         <div className="menu">
             <nav className="menu__nav">
                 <ul className="menu__list">
-                    <li className="menu__item">Home</li>
-                    <li className="menu__item">Dashboard</li>
-                    <li className="menu__item">Booking</li>
+                    <li className="menu__item"><Link to="/">Home</Link></li>
+                    <li className="menu__item"><Link to="/dashboard">Dashboard</Link></li>
+                    <li className="menu__item"><Link to="/booking">Booking</Link></li>
                 </ul>
             </nav>
             <div className="menu__search">

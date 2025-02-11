@@ -21,10 +21,15 @@
   font-size: 19px;
   cursor: pointer;
   font-family: "Sawarabi Mincho", serif;
+}
+
+.menu__item a {
+  text-decoration: none;
+  color: #623e2a;
   transition: ease-in-out 0.3s;
 }
 
-.menu__item:hover {
+.menu__item a:hover {
   color: #623e2aa2;
 }
 
