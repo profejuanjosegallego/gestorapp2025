@@ -2,3 +2,4 @@
 ## Plataforma para la gestion  de sitios Comunes
 JUAN DIEGO SANCHEZ - WD
 DAVID ARENAS OROZCO
+Melissa Beltran
