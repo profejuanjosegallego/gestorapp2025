@@ -31,10 +31,10 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/TheWellhall.git
+git clone https://github.com/JDiegx/gestorapp2025.git
 
 # Acceder al directorio del proyecto
-cd TheWellhall
+cd gestorapp2025
 
 # Instalar dependencias
 npm install
