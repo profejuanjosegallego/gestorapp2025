@@ -14,7 +14,7 @@ Bienvenido a **The Wellhall**, una plataforma web para la gestión de reservas e
 ✅ Diseño moderno y responsivo con **CSS vanilla**.  
 ✅ Construido con **Vite** para un desarrollo rápido y eficiente.  
 
-## 🚀 Demo (Opcional)
+## 🚀 Demo
 
 [🔗 Ver Demo en Producción](#) *(Si tienes una URL de despliegue, agrégala aquí)*
 
@@ -24,7 +24,6 @@ Bienvenido a **The Wellhall**, una plataforma web para la gestión de reservas e
 - **Vite**
 - **CSS vanilla**
 - **React Router** *(para navegación)*
-- **Context API o Redux** *(si manejas estado global)*
 
 ## 🔧 Instalación y Uso
 
@@ -76,10 +75,10 @@ El servidor se ejecutará en **http://localhost:5173** *(o el puerto configurado
 
 ## 📜 Licencia
 
-Este proyecto está bajo la licencia **MIT** *(o la que prefieras)*.
+Este proyecto está bajo la licencia **MIT**.
 
 ## ✨ Autores
 
-Desarrollado por **[Tu Nombre]**.  
+Desarrollado por Juan Diego Sanchez.  
 Si deseas contribuir, ¡tus aportes son bienvenidos! 🚀
 
