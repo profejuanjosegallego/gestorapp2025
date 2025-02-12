@@ -49,28 +49,28 @@ El servidor se ejecutará en **http://localhost:5173** *(o el puerto configurado
 
 ```
 /gestorapp
-  /módulos_nodo  # Dependencias de Node.js
-  /público        # Archivos estáticos
-  /fuente         # Código fuente principal
-    /activos      # Imágenes y otros recursos
-    /componentes  # Componentes reutilizables
-      /común
-      /Sobre nosotros
-      /Pie de página
-      /Encabezamiento
-      /En la prensa
-      /Menú
-    /paginas      # Páginas principales (Reserva, Panel, Hogar)
-    /enrutador    # Configuración de rutas
-      + Enrutador.jsx
-  índice.css      # Estilos principales
-  principal.jsx   # Punto de entrada de la aplicación
-  .gitignore      # Archivos ignorados por Git
-  índice.html     # Archivo HTML principal
-  paquete-lock.json  # Bloqueo de dependencias
-  paquete.json       # Configuración de dependencias y scripts
-  LÉAME.md          # Documentación del proyecto
-  vite.config.js     # Configuración de Vite
+  /node_modules   # Node.js dependencies
+  /public         # Static files
+  /src            # Main source code
+    /assets       # Images and other resources
+    /components   # Reusable components
+      /common
+      /AboutUs
+      /Footer
+      /Header
+      /Press
+      /Menu
+    /pages        # Main pages (Booking, Dashboard, Home)
+    /router       # Routing configuration
+      + Router.jsx
+  index.css       # Main styles
+  main.jsx        # Application entry point
+  .gitignore      # Files ignored by Git
+  index.html      # Main HTML file
+  package-lock.json  # Dependency lock file
+  package.json       # Dependency and script configuration
+  README.md          # Project documentation
+  vite.config.js     # Vite configuration
 ```
 
 ## 📜 Licencia
