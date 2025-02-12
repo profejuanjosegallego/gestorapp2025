@@ -7,7 +7,7 @@ const Booking = () => {
     return (
         <>
             <Header />
-            <div>Booking</div>
+            <div className='booking'>Booking</div>
             <Footer />
         </>
     )
