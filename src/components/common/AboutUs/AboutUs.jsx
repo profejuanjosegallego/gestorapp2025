@@ -1,11 +1,9 @@
 import React from 'react';
 import "../AboutUs/AboutUs.css";
-import Header from "../../common/Header/Header";
 
 const AboutUs = () => {
     return (
         <>
-            <Header />
             <section className="about-us">
                 <div className="about-us__image-container">
                 </div>

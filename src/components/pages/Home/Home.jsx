@@ -18,6 +18,7 @@ const Home = () => {
                     <button className="home__banner-button">LEARN MORE</button>
                 </div>
             </section>
+            <Header />
             <AboutUs />
             <InThePress />
             <Footer />

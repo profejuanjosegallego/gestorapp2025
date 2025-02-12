@@ -1,12 +1,15 @@
 .header {
   width: 100%;
-  height: 150px;
-  background-color: #f4f1ed;
+  height: 60px;
+  background: rgba(244, 241, 237, 0.8); /* Fondo con ligera transparencia */
   position: sticky;
   top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  backdrop-filter: blur(10px);
+  justify-content: flex-end;
+  backdrop-filter: blur(12px); /* Mayor desenfoque para elegancia */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
   overflow: hidden;
 }
