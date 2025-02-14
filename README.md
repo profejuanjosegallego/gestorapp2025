@@ -1,4 +1,4 @@
-#GESTOR APP 2025
+# GESTOR APP 2025
 ## Descripción
 Este proyecto es una aplicación para gestionar las zonas comunes de un conjunto residencial. A través de esta app, los residentes pueden:
 - Ver la disponibilidad de horarios para cada zona común.
@@ -35,6 +35,6 @@ Las contribuciones son bienvenidas.
 Este proyecto está bajo la Licencia MIT. 
 ## Contacto
 Si tienes alguna pregunta o sugerencia, no dudes en contactarme:
-Nombre: Caren Agudelo
-Email: [cagudeloc@cesde.net]
-GitHub: carenagudelo
+- Nombre: Caren Agudelo
+- Email: [cagudeloc@cesde.net]
+- GitHub: carenagudelo
