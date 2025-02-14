@@ -21,15 +21,18 @@ To create and run the application in your local environment, follow these steps:
 
 4. **Navigate to the project directory**:
     Paste the following command in the console:
-    cd projectName
+     ```bash
+    -cd projectName
 
 5. **Install the dependencies**:
     Run the following command to install the necessary dependencies:
-    npm install
+     ```bash
+    -npm install
 
 6. **Run the application**:
     To start the application, run:
-    npm run dev
+     ```bash
+    -npm run dev
 
 # Usage
 
