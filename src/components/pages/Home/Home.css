@@ -129,3 +129,47 @@
   font-style: italic;
   text-align: center;
 }
+
+.gallery {
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f1ed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.gallery__container {
+  width: 450px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.gallery__image {
+  width: 450px;
+}
+
+.gallery__caption {
+  width: 100%;
+  height: 70px;
+  border: 2px solid #623e2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__text {
+  text-align: center;
+}
+
+.gallery__container--highlighted {
+  width: 950px;
+}
+
+.gallery-image--highlighted {
+  width: 950px;
+  height: 600px;
+}
