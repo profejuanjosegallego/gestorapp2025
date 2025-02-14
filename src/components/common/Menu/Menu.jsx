@@ -7,7 +7,13 @@ export function Menu() {
       <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            Home
+          <img 
+              src="../../../assets/img/banner.jpg" // Reemplaza con la ruta de tu logo
+              alt="Logo"
+              width="30" // Ajusta el tamaño según sea necesario
+              height="30" // Ajusta el tamaño según sea necesario
+              className="d-inline-block align-text-top"
+            />
           </Link>
           <button
             className="navbar-toggler"
@@ -33,17 +39,7 @@ export function Menu() {
                 </Link>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            
           </div>
         </div>
       </nav>
