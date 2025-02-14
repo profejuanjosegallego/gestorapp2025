@@ -15,7 +15,7 @@ Este proyecto es una aplicación para gestionar las zonas comunes de un conjunto
 Para clonar y ejecutar este proyecto en tu máquina local, sigue estos pasos:
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/tuusuario/nombre-del-repo.git
+   git clone https://github.com/carenagudelo/gestorapp2025.git
    ```
 2. **Navegar al directorio del proyecto:**
  ```bash
