@@ -1,6 +1,6 @@
 .about-us {
   width: 100%;
-  height: calc(100vh + 70px);
+  height: calc(100vh - 70px);
   background-color: #f4f1ed;
   display: flex;
   flex-direction: row-reverse;
@@ -19,7 +19,7 @@
 
 .about-us__content {
   width: 750px;
-  height: 470px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -34,6 +34,6 @@
 
 .about-us__description {
   width: 650px;
-  font-size: 23px;
+  font-size: 18px;
   line-height: 1.4;
 }

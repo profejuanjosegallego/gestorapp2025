@@ -24,6 +24,7 @@
 .home__banner-text {
   font-size: 25px;
   font-weight: 600;
+  font-family: sans-serif;
 }
 
 .home__banner-title {
@@ -60,4 +61,71 @@
 .home__banner-button:hover {
   background-color: transparent;
   color: white;
+}
+
+.room {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: #f4f1ed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.room__info {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 30px;
+}
+
+.room__title {
+  font-size: 70px;
+  font-family: "Sawarabi Mincho", serif;
+}
+
+.room__description {
+  width: 400px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.room__media {
+  width: 700px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.room__image-wrapper {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.room__image {
+  width: 700px;
+  height: 500px;
+}
+
+.room__caption {
+  width: 99%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #623e2a;
+}
+
+.room__caption-text {
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
 }
