@@ -5,8 +5,8 @@ const Room = ({ object }) => {
     const [reserved, setReserved] = useState(false);
     const sentLocal = () => {
         setReserved(true);
-        if (!reserved) console.log('Reserva exitosa!', object)
-        if (reserved) console.log('Ups! Alguien ya reservo este espacio.')
+        if (!reserved) alert('Reserva exitosa!')
+        if (reserved) alert('Ups! Alguien ya reservo este espacio.')
     }
     return (
         <div className="room-card">

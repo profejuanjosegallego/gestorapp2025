@@ -66,3 +66,9 @@
   width: 17px;
   height: 17px;
 }
+
+@media (max-width: 1025px) {
+  .menu__item {
+    font-size: 16px;
+  }
+}

@@ -39,7 +39,7 @@ export const dbRooms = [
         id: 5,
         image: "garden-view-retreat.png",
         name: "Garden View Retreat",
-        price: 249,
+        price: 649,
         adults: 2, 
         childrens: 1,
         below: 7

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "./Dashboard.css"
 import Header from "../../common/Header/Header.jsx"
-import Footer from "../../common/Footer/Footer.jsx"
 import Room from '../../common/Room/Room.jsx'
 import { dbRooms } from '../../../database/dataRooms.js'
 import Promotion from '../../../components/common/Promotion/Promotion.jsx'
@@ -30,7 +29,6 @@ const Dashboard = () => {
                 }
                 </div>
             </div>
-            <Footer />
         </>
     )
 }
