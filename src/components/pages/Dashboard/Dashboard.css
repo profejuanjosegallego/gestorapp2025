@@ -6,15 +6,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  padding-bottom: 50px;
 }
 
-.dashboard__tittle,
-.dashboard__tittle-promos {
-  font-size: 60px;
+.dashboard__tittle {
+  font-size: 36px;
   text-align: center;
   font-family: "Sawarabi Mincho", serif;
-  margin: 50px 0px;
+  margin: 30px 0px 20px 0px;
+}
+
+.dashboard__tittle-promos {
+  font-size: 45px;
+  text-align: center;
+  font-family: "Sawarabi Mincho", serif;
+  margin: 30px 0px 0px 0px;
 }
 
 .dashboard__rooms {
@@ -34,4 +39,52 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 30px 0px;
+}
+
+@media (min-width: 375px) {
+  .dashboard__tittle {
+    font-size: 40px;
+  }
+
+  .dashboard__tittle-promos {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 425px) {
+  .dashboard__tittle {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard__tittle-promos br {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard__rooms {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .dashboard__promos {
+    justify-content: center;
+    margin: 30px 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .dashboard__rooms {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }

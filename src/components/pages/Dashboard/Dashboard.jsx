@@ -23,7 +23,7 @@ const Dashboard = () => {
                         rooms.map((room) => <Room key={room.id} object={room} />)
                     }
                 </div>
-                <h2 className='dashboard__tittle-promos'>Promos and Offers</h2>
+                <h2 className='dashboard__tittle-promos'>Promos and <br /> Offers</h2>
                 <div className='dashboard__promos'>{
                     promotions.map((promotion) => <Promotion key={promotion.id} object={promotion} />)
                 }

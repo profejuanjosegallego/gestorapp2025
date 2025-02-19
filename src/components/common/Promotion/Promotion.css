@@ -10,8 +10,8 @@
 }
 
 .promotion-card {
-  width: 350px;
-  height: 450px;
+  width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +20,7 @@
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
   background-color: #f4f1ed;
+  margin: 30px 0px;
 }
 
 .promotion-card__image {
@@ -39,7 +40,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding-left: 20px;
+  padding: 0px 20px;
   box-sizing: border-box;
 }
 
@@ -49,7 +50,7 @@
 }
 
 .promotion-card__tittle {
-  font-size: 27px;
+  font-size: 26px;
   margin: -15px 0px;
 }
 
@@ -70,4 +71,37 @@
 .promotion-card__details-button:hover {
   background-color: #623e2a;
   color: #f4f1ed;
+}
+
+@media (min-width: 375px) {
+  .promotion-card {
+    width: 320px;
+    height: 430px;
+  }
+  .promotion-card__tittle {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 768px) {
+  .promotion-card {
+    width: 320px;
+    height: 430px;
+    margin: 30px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .promotion-card {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1350px) {
+  .promotion-card {
+    width: 320px;
+    height: 430px;
+    margin: 30px 40px;
+  }
 }

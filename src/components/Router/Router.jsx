@@ -16,7 +16,6 @@ const Router = () => {
                 <Route path='/booking' element={<Booking />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
-            <Footer />
         </>
     )
 }

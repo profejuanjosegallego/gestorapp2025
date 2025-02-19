@@ -10,14 +10,13 @@
 }
 
 .room-card {
-  width: 350px;
-  height: 450px;
+  width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin: 20px 50px;
-  /* Animación */
+  margin: 30px 0px;
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -45,24 +44,24 @@
 
 .room-card__details-info,
 .room-card__details-price {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .room-card__details-title {
-  font-size: 27px;
+  font-size: 25px;
   margin: -15px 0px;
 }
 
 .room-card__details-button {
-  width: 200px;
-  height: 40px;
+  width: 180px;
+  height: 35px;
   margin: 0 auto;
   border: 2px solid #623e2a;
   background-color: transparent;
   color: #623e2a;
   cursor: pointer;
   font-family: "Sawarabi Mincho", serif;
-  font-size: 17px;
+  font-size: 16px;
   transition: ease-in-out 0.3s;
   margin-bottom: -10px;
 }
@@ -75,4 +74,36 @@
 .--reserverd {
   background-color: #623e2a;
   color: #f4f1ed;
+}
+
+@media (min-width: 375px) {
+  .room-card {
+    width: 320px;
+    height: 430px;
+  }
+
+  .room-card__details-button {
+    width: 200px;
+    height: 40px;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  .room-card {
+    width: 300px;
+    height: 400px;
+    margin: 30px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1350px) {
+  .room-card {
+    width: 320px;
+    height: 430px;
+    margin: 30px 40px;
+  }
 }

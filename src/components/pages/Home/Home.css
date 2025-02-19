@@ -165,6 +165,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 20px;
+  box-sizing: border-box;
 }
 
 .gallery__text {
@@ -178,62 +180,4 @@
 .gallery-image--highlighted {
   width: 950px;
   height: 600px;
-}
-
-@media (max-width: 1024px) {
-  .home__banner-content {
-    height: 230px;
-  }
-
-  .home__banner-text {
-    font-size: 23px;
-  }
-  .home__banner-title {
-    font-size: 120px;
-  }
-
-  .home__banner-subtitle {
-    font-size: 40px;
-  }
-  .home__banner-button {
-    width: 230px;
-    height: 45px;
-    font-size: 16px;
-  }
-  .room__info {
-    width: 380px;
-  }
-
-  .room__title {
-    font-size: 60px;
-  }
-
-  .room__description {
-    font-size: 15px;
-  }
-
-  .room__media {
-    width: 560px;
-  }
-
-  .gallery__container {
-    width: 330px;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .gallery__text {
-    font-size: 14px;
-  }
-
-  .gallery__container--highlighted {
-    width: 580px;
-  }
-
-  .gallery-image--highlighted {
-    width: 100%;
-  }
 }
