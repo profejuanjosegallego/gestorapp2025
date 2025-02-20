@@ -1,12 +1,12 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from "../../components/pages/Home/Home.jsx"
-import Dashboard from "../../components/pages/Dashboard/Dashboard.jsx"
-import Booking from "../../components/pages/Booking/Booking.jsx"
+import Home from "../pages/Home/Home.jsx"
+import Dashboard from "../pages/Dashboard/Dashboard.jsx"
+import Booking from "../pages/Booking/Booking.jsx"
 import NotFound from '../pages/NotFound/NotFound.jsx'
-import Footer from "../../components/common/Footer/Footer.jsx"
+import Footer from "../common/Footer/Footer.jsx"
 
-const Router = () => {
+const AppRouter = () => {
     return (
         <>
             <Routes>
@@ -20,4 +20,4 @@ const Router = () => {
     )
 }
 
-export default Router
+export default AppRouter;
