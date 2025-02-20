@@ -1,6 +1,6 @@
 import React from 'react';
 import './InThePress.css';
-import doubleQuotationMarks from "../../../assets/img/icon.png"
+import doubleQuotationMarks from "/img/icon.png"
 
 const InThePress = () => {
     return (

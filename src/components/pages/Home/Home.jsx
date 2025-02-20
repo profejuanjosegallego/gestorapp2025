@@ -3,9 +3,9 @@ import "./Home.css";
 import AboutUs from "../../common/AboutUs/AboutUs";
 import Header from "../../common/Header/Header";
 import InThePress from "../../common/InThePress/InThePress";
-import roomPhoto from "../../../assets/img/86ec4070fa250138f07d1eb7c08f0304.jpg";
-import diningRoom from "../../../assets/img/the-wellhall-room-1.png";
-import bathRoom from "../../../assets/img/the-wellhall-room-2.png";
+import roomPhoto from "/img/86ec4070fa250138f07d1eb7c08f0304.jpg";
+import diningRoom from "/img/the-wellhall-room-1.png";
+import bathRoom from "/img/the-wellhall-room-2.png";
 
 const Home = () => {
     const aboutUsRef = useRef(null);

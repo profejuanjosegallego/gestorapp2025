@@ -1,7 +1,7 @@
 .home__banner {
   width: 100%;
   height: 100vh;
-  background-image: url(../../../assets/img/background-img-effect.png);
+  background-image: url(/img/background-img-effect.png);
   background-position: center;
   background-size: cover;
   display: flex;
