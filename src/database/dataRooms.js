@@ -11,7 +11,7 @@ export const dbRooms = [
     {
         id: 2,
         image: "de-luxe-sea-view.png",
-        name: "De Luxe Sea View",
+        name: "Deluxe Sea View",
         price: 209,
         adults: 2, 
         childrens: 1,

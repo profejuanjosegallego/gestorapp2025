@@ -12,7 +12,7 @@ const Promotion = ({ object }) => {
                 />
             </div>
             <div className="promotion-card__details">
-                <h2 className="promotion-card__title">{object.name}</h2>
+                <h2 className="promotion-card__tittle">{object.name}</h2>
                 <p className="promotion-card__description">{object.description}</p>
             </div>
         </div>
