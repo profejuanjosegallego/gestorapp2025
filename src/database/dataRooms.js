@@ -2,7 +2,7 @@ export const dbRooms = [
     {
         id: 1,
         image: "de-luxe-room.png",
-        name: "De Luxe Room",
+        name: "Deluxe Room",
         price: 189,
         adults: 2, 
         childrens: 1,
