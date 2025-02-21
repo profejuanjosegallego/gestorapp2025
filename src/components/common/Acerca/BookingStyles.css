@@ -1,0 +1,61 @@
+.booking-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(222, 227, 241);
+}
+
+h2 {
+    color: #4CAF50;
+    margin-top: 30px;
+}
+
+p {
+    color: #f5eaea;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.zone-item {
+    background: #e7f3fe;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
