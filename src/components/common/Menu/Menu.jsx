@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function Menu() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
+      <nav className="navbar navbar-expand-lg menu navbar-dark bg-info fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             Inicio
@@ -30,6 +30,11 @@ export function Menu() {
               <li className="nav-item">
                 <Link className="nav-link" to="/dashboard">
                   DashBoard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/booking">
+                  Booking
                 </Link>
               </li>
             </ul>

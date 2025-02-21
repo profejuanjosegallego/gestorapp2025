@@ -1,3 +1,5 @@
+import "./Acerca.css"
+
 export function Acerca(){
     return(
 
@@ -7,9 +9,9 @@ export function Acerca(){
                     <img src="../../../../src/assets/img/mascota.webp" alt="imagen" className="img-fluid"/>
                 </section>
                 <section className="col-12 col-md-6">
-                    <h2>GestorApp</h2>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa corporis cum accusantium, fuga ab eveniet reiciendis in culpa expedita necessitatibus nihil quaerat accusamus ullam aperiam illo adipisci sequi porro.
+                    <h2 className="title-acerca-de">Gestor App</h2>
+                    <p className="description-vita-bella">
+                    Gestor App de Vita Bella te permite gestionar y reservar las zonas comunes de tu conjunto residencial de manera fácil y rápida. Con solo unos clics, accede a la disponibilidad en tiempo real y asegura tu lugar en la piscina, el salón social, las canchas deportivas y mucho más.
                     </p>
                 </section>
             </section>

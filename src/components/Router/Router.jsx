@@ -4,6 +4,8 @@ import { Home } from "../pages/Home/Home";
 import { DashBoard } from "../pages/DashBoard/DashBoard";
 
 import { Menu } from "../common/Menu/Menu";
+import { Footer } from "../common/Footer/Footer";
+import { Booking } from "../pages/Booking/Booking";
 
 export function Router(){
 
@@ -13,8 +15,10 @@ export function Router(){
         <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/home" element={<Home/>}></Route>
-            <Route path="/dashboad" element={<DashBoard/>}></Route>
+            <Route path="/dashboard" element={<DashBoard/>}></Route>
+            <Route path="/booking" element={<Booking/>}></Route>
         </Routes>
+        <Footer></Footer>
         </>
     )
 }
