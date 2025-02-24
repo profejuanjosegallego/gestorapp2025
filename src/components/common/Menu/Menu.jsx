@@ -1,5 +1,6 @@
 import "./Menu.css";
 import { Link } from "react-router-dom";
+import logo from "../../../assets/img/hotel-sukhdev-creative-logo-design__1_-removebg-preview (1).png"; // Asegúrate de que la ruta sea correcta
 
 export function Menu() {
   return (
@@ -7,7 +8,7 @@ export function Menu() {
       <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            Home
+            <img src={logo} alt="Hotel Lux Logo" className="navbar-logo" />
           </Link>
           <button
             className="navbar-toggler"
@@ -23,25 +24,29 @@ export function Menu() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/home">
+                <Link className="nav-link" to="/home">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/dash">
-                  DashBoard
+                  Services
                 </Link>
               </li>
-            
+              <li className="nav-item">
+                <Link className="nav-link" to="/booking">
+                  Booking
+                </Link>
+              </li>
             </ul>
-            <form className="d-flex" role="search">
+            <form className="d-flex search-form" role="search">
               <input
                 className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-search" type="submit">
                 Search
               </button>
             </form>

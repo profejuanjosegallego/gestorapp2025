@@ -1,6 +1,7 @@
 
 import {Banner} from "../../common/Banner/Banner"
 import {Acerca} from "../../common/Acerca/Acerca"
+import {Footer} from "../../common/Footer/Footer"
 
 export function Home(){
 
@@ -9,6 +10,7 @@ export function Home(){
         <>
             <Banner></Banner>
             <Acerca></Acerca>
+            <Footer></Footer>
         
         </>
     )
