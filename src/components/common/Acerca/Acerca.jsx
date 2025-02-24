@@ -8,8 +8,9 @@ export function Acerca(){
                 </section>
                 <section className="col-12 col-md-6">
                     <h2>GestorApp</h2>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa corporis cum accusantium, fuga ab eveniet reiciendis in culpa expedita necessitatibus nihil quaerat accusamus ullam aperiam illo adipisci sequi porro.
+                    <p className="text-justify px-2 py-3 lead fs-5">
+
+                    Descubre la forma más sencilla de reservar y disfrutar los espacios comunes de tu urbanización. Desde la piscina hasta el salón social, gestiona tus reservas en segundos, consulta disponibilidad en tiempo real y olvídate de los procesos manuales. ¡Transforma la manera en que interactúas con tu comunidad y aprovecha al máximo cada rincón de tu lugar favorito!
                     </p>
                 </section>
             </section>

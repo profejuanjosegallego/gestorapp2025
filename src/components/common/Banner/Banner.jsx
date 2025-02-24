@@ -7,6 +7,7 @@ export function Banner(){
             <section className="banner">
                 <h2 className='text-white'>
                     <span className="display-1">GestorApp</span>
+                    <br />
                     Aplicación para gestión de espacios en tu lugar
                     de descanso...
                 </h2>

@@ -1,5 +1,5 @@
 .banner{
-    background-image: url("../../../../src/assets/img/banner.jpg");
+    background-image: url("../../../../src/assets/img/fp_piscina2.png");
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
@@ -17,6 +17,6 @@
     height: 100%;
     background-color: black;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.3;
 
 }

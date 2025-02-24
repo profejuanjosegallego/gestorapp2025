@@ -9,7 +9,6 @@ export function Home(){
         <>
             <Banner></Banner>
             <Acerca></Acerca>
-        
         </>
     )
 

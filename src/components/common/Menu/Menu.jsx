@@ -1,13 +1,14 @@
 import "./Menu.css";
 import { Link } from "react-router-dom";
+import { SquareDashedKanban } from 'lucide-react';
 
 export function Menu() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
+      <nav className="bg-dark navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            Home
+          <SquareDashedKanban size={40} />
           </Link>
           <button
             className="navbar-toggler"
@@ -32,6 +33,11 @@ export function Menu() {
                   DashBoard
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/booking">
+                  Booking
+                </Link>
+              </li>
             
             </ul>
             <form className="d-flex" role="search">
@@ -41,7 +47,7 @@ export function Menu() {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-primary blue" type="submit">
                 Search
               </button>
             </form>
