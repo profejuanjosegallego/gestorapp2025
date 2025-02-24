@@ -4,7 +4,7 @@ export function Acerca(){
         <section className="container my-5">
             <section className="row">
                 <section className="col-12 col-md-6">
-                    <img src="../../../../src/assets/img/mascota.webp" alt="imagen" className="img-fluid"/>
+                    <img src="../../../../src/assets/img/BD-1_AG.webp" alt="imagen" className="img-fluid"/>
                 </section>
                 <section className="col-12 col-md-6">
                     <h2>GestorApp</h2>

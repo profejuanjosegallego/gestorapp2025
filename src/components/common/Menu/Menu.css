@@ -1,3 +1,22 @@
 .menu{
-    background-color: #123c64;
+    background-color: #ca861f;
+}
+
+.menu .navbar-brand,
+.menu .nav-link {
+    color: rgb(8, 0, 0) !important; /* Color del texto en la navbar */
+}
+
+.menu .nav-link:hover {
+    color: #ffcc00 !important; /* Color al pasar el mouse */
+}
+
+.menu .btn-outline-success {
+    color: rgb(7, 0, 0) !important;  /* Color del texto del botón */
+    border-color: rgb(10, 0, 0) !important; /* Borde del botón */
+}
+
+.menu .btn-outline-success:hover {
+    background-color: white !important;
+    color: #ca861f !important; /* Color del texto al pasar el mouse */
 }

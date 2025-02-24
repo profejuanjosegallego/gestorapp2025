@@ -6,9 +6,10 @@ import 'bootstrap/dist/js/bootstrap.js'
 
 
 import { Home } from './components/pages/Home/Home'
+import { Dashboard } from './components/pages/Dashboard/Dashboard'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <Home/>
+   <Dashboard/>
   </StrictMode>,
 )
