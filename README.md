@@ -1,16 +1,5 @@
 
 ![The Wellhall Resort   Spa Hotel](https://github.com/user-attachments/assets/ced93bb6-fb9f-4773-b553-ebe4e96aa1f9)
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/4d50e80e-4c47-4120-adeb-f1be15e8698a" width="300"></td>
-    <td><img src="https://github.com/user-attachments/assets/1629e88c-125b-4906-8b86-93831e045047" width="300"></td>
-    <td><img src="https://github.com/user-attachments/assets/d540071f-982d-4ce6-a6de-18063dbc9813" width="300"></td>
-  </tr>
-</table>
-
-
-
-![The Wellhall Resort   Spa Hotel](https://github.com/user-attachments/assets/ced93bb6-fb9f-4773-b553-ebe4e96aa1f9)
 
 <table>
   <tr>
