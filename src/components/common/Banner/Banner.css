@@ -1,22 +1,133 @@
-.banner{
-    background-image: url("../../../../src/assets/img/banner.jpg");
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed;
-    padding: 25%;
-    position: relative;
-    z-index: 1;
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+/* Estilos para el banner */
+.banner {
+  background-image: url("../../../../src/assets/img/5c9ddd_a0366ef326984a48a30b4da3e76e57b7~mv2.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  height: 100vh; /* Altura completa de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
 }
 
-.banner::after{
-    content: '';
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: -1;
-    opacity: 0.6;
+/* Superposición oscura para mejorar la legibilidad del texto */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+  z-index: -1;
+}
 
+/* Contenido del banner */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Título del banner */
+.banner-title {
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif; /* Fuente elegante para el título */
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Subtítulo del banner */
+.banner-subtitle {
+  font-size: 1.5rem;
+  font-family: 'Lora', serif; /* Fuente secundaria para el subtítulo */
+  margin-bottom: 20px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Descripción del banner */
+.banner-description {
+  font-size: 1.2rem;
+  font-family: 'Lora', serif; /* Fuente secundaria para la descripción */
+  margin-bottom: 30px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+/* Botón de llamado a la acción (CTA) */
+.banner-cta {
+  background-color: #d4af37; /* Color dorado */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-family: 'Lora', serif; /* Fuente secundaria para el botón */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.banner-cta:hover {
+  background-color: #c0a235; /* Color dorado más oscuro al hacer hover */
+  transform: scale(1.05); /* Efecto de escala al hacer hover */
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2.5rem; /* Tamaño más pequeño para móviles */
+  }
+
+  .banner-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .banner-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .banner-cta {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 }
