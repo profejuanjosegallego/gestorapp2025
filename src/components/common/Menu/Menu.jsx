@@ -1,5 +1,6 @@
 import "./Menu.css";
 import { Link } from "react-router-dom";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export function Menu() {
   return (
@@ -7,9 +8,9 @@ export function Menu() {
       <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            Home
+          GestorApp
           </Link>
-          <button
+          <button     
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -32,21 +33,17 @@ export function Menu() {
                   DashBoard
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/booking">
+                  Booking
+                </Link>
+              </li>
             
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+           
           </div>
         </div>
+
       </nav>
     </>
   );

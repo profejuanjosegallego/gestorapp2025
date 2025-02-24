@@ -5,6 +5,10 @@ import { DashBoard } from "../pages/DashBoard/DashBoard"
 
 import { Menu } from "../common/Menu/Menu"
 
+import {Booking} from "../pages/Booking/Booking"
+import {Footer} from "../common/Footer/Footer"
+
+
 export function Router(){
     return(
         <>
@@ -13,6 +17,8 @@ export function Router(){
             <Route path="/" element={<Home/>}></Route>
             <Route path="/home" element={<Home/>}></Route>
             <Route path="/dashboard" element={<DashBoard/>}></Route>
+            <Route path="/booking" element={<Booking/>}></Route>
+            <Route path="/footer" element={<Footer/>}></Route>
         </Routes>
         </>
     )

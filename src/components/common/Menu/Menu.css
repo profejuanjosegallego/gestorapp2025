@@ -1,3 +1,39 @@
 .menu{
-    background-color: #123c64;
+    background-color: #253ce6;
 }
+
+.nav-item .nav-link:hover {
+    background: linear-gradient(135deg, #253ce6, #1a2b8f);
+    transition: background 0.5s ease-in-out;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+    border-radius: 100px;
+}
+
+.navbar-brand:hover{
+    background: linear-gradient(135deg, #253ce6, #1a2b8f);
+    transition: background 0.5s ease-in-out;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+    border-radius: 100px;
+}
+
+
+.search-bar input {
+    border-radius: 20px;
+    border: 1px solid #121111;
+    padding: 8px 15px;
+    
+  }
+  
+  .search-bar button {
+    border-radius: 20px;
+    padding: 8px 15px;
+    background-color: #3ad7ef;
+    color: white;
+    border: none;
+  }
+  
+  .search-bar button:hover {
+    background-color: #e82939;
+  }

@@ -4,11 +4,10 @@ export function Banner(){
     return(
 
         <>
-            <section className="banner">
+            <section className="banner">    
                 <h2 className='text-white'>
-                    <span className="display-1">GestorApp</span>
-                    Aplicación para gestión de espacios en tu lugar
-                    de descanso...
+                    <span className="display-1"></span>
+                    Application for space management in your place of rest...
                 </h2>
 
             </section>
