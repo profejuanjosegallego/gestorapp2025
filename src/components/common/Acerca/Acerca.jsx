@@ -9,7 +9,7 @@ export function Acerca(){
                 <section className="col-12 col-md-6">
                     <h2>GestorApp</h2>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa corporis cum accusantium, fuga ab eveniet reiciendis in culpa expedita necessitatibus nihil quaerat accusamus ullam aperiam illo adipisci sequi porro.
+                    🏡✨ Bienvenido a Gestor App – Tu solución para reservar espacios comunes en tu unidad residencial de forma rápida y sencilla. 📅 Reserva salones, gimnasios, canchas y más con solo unos clics. ¡Organiza tu comunidad de manera eficiente y sin complicaciones! 🚀
                     </p>
                 </section>
             </section>
