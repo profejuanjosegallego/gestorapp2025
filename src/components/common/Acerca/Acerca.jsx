@@ -9,8 +9,7 @@ export function Acerca(){
                 <section className="col-12 col-md-6">
                     <h2>GestorApp</h2>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa corporis cum accusantium, fuga ab eveniet reiciendis in culpa expedita necessitatibus nihil quaerat accusamus ullam aperiam illo adipisci sequi porro.
-                    </p>
+                    Bienvenido al sistema de reservas de nuestra unidad residencial. Aquí podrás gestionar fácilmente la disponibilidad y el uso de los diferentes espacios comunes que tenemos para ti y tu familia, de manera rápida y sencilla. Nuestro objetivo es brindarte una experiencia cómoda y organizada para que disfrutes al máximo de las instalaciones sin preocupaciones.                    </p>
                 </section>
             </section>
         </section>
