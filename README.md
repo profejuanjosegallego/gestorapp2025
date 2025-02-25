@@ -1,5 +1,4 @@
 
-````markdown name=README.md
 # GESTOR APP 2025
 
 ## Plataforma para la gestión de sitios comunes
