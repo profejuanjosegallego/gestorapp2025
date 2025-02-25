@@ -39,15 +39,15 @@ export function Menu() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  dashboard
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Action
+                    <a className="dropdown-item" href="/src/components/pages/Home/Dashboard.jsx">
+                      reserva
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a className="dropdown-item" href="#">
                       Another action
                     </a>
@@ -59,7 +59,7 @@ export function Menu() {
                     <a className="dropdown-item" href="#">
                       Something else here
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li className="nav-item">
