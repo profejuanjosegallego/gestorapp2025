@@ -1,0 +1,87 @@
+.acerca-section {
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.section-title {
+    color: #0f3356;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.divider {
+    height: 3px;
+    width: 60px;
+    background-color: #4CAF50;
+    margin-bottom: 2rem;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+}
+
+.content-box {
+    padding: 1.5rem;
+}
+
+.content-box h3 {
+    color: #0f3356;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-left: 4px solid #4CAF50;
+    padding-left: 1rem;
+}
+
+.lead {
+    color: #495057;
+    font-weight: 500;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #e8f5e9;
+    padding: 0.75rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+    background-color: #c8e6c9;
+}
+
+.feature-item i {
+    font-size: 1.25rem;
+    color: #4CAF50;
+}
+
+.feature-item span {
+    font-weight: 500;
+    color: #2e7d32;
+}
+
+.btn-outline-primary {
+    color: #0f3356;
+    border-color: #0f3356;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0f3356;
+    color: white;
+}

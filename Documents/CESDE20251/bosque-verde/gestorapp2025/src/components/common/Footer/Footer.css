@@ -1,0 +1,21 @@
+.footer {
+    background-color: #0f3356;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .footer h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+  }
+  
+  .footer a:hover {
+    color: #4CAF50 !important;
+    transition: color 0.3s ease;
+  }
