@@ -37,7 +37,7 @@ export function AcercaBooking(){
             //
             <h1 className='title'>Reservas de Zonas Comunes</h1>
             <p className='subtitle'>Utiliza el siguiente formulario para solicitar una reserva.</p>
-
+            <img className="responsive-image" src="../../../../src/assets/img/banner2.jpg" alt="imagen" />
             <form onSubmit={handleSubmit}>
                 <label>Nombre:</label>
                 <input type="text" name="name" onChange={handleChange} required />
@@ -62,13 +62,7 @@ export function AcercaBooking(){
                 <button type="submit">Enviar Solicitud de Reserva</button>
             </form>
 
-            <h2>Zonas Comunes Disponibles</h2>
-            {zones.map(zone => (
-                <div key={zone.value}>
-                    <h3>{zone.label}</h3>
-                </div>
-            ))}
-            /
+          
         </div>
     );
 };
