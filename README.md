@@ -39,7 +39,7 @@ npm install
 
 # Iniciar aplicación en modo desarrollo
 npm run dev
-
+```
 
 ## 📄 Licencia
 
