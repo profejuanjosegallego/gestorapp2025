@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Booking.css'; // Importa el archivo CSS
 
 export const Booking = () => {
     const [name, setName] = useState('');
@@ -14,9 +15,9 @@ export const Booking = () => {
     };
 
     return (
-        <div>
+        <div className="booking-container">
             <h1>Reservar</h1>
-            <form onSubmit={handleSubmit}>
+            <form className="booking-form" onSubmit={handleSubmit}>
                 <div>
                     <label>Nombre:</label>
                     <input

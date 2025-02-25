@@ -32,6 +32,11 @@ export function Menu() {
                   DashBoard
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/booking">
+                  Booking
+                </Link>
+              </li>
             
             </ul>
             <form className="d-flex" role="search">
