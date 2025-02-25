@@ -1,5 +1,5 @@
-import './Banner.css'
-export function Banner(){
+import './Dashboard.css'
+export function Dashboard(){
 
     return(
 
@@ -7,11 +7,11 @@ export function Banner(){
             <section className="banner">
                 <h2 className='text-white'>
                     <span className="display-1">GestorApp</span>
-                    Descansa sin preocupaciones, reserva con un clic." 🌿✨
+                    Aplicación para gestión de espacios en tu lugar
+                    de descanso...
                 </h2>
 
             </section>
         </>
     )
-
 }

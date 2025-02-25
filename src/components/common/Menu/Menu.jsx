@@ -5,9 +5,9 @@ export function Menu() {
     <>
       <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          {/* <a className="navbar-brand" href="#">
             Navbar
-          </a>
+          </a> */}
           <button
             className="navbar-toggler"
             type="button"
@@ -23,12 +23,17 @@ export function Menu() {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
-                  Home
+                  Inicio
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Dashboard
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Link
+                  Cabañas 
                 </a>
               </li>
               <li className="nav-item dropdown">
@@ -39,17 +44,17 @@ export function Menu() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  
                 </a>
                 <ul className="dropdown-menu">
                   <li>
                     <a className="dropdown-item" href="#">
-                      Action
+                    El Encanto
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                      Another action
+                      
                     </a>
                   </li>
                   <li>
@@ -57,16 +62,46 @@ export function Menu() {
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                      Something else here
+                      Vista Hermosa 
+
                     </a>
                   </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Mirador de Valle
+                    </a>
+
+                    </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      El Bosque
+
+                    </a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Laguna Azul
+                    </a>
+
+                  </li>
                 </ul>
+
+                
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link disabled" aria-disabled="true">
                   Disabled
                 </a>
-              </li>
+              </li> */}
             </ul>
             <form className="d-flex" role="search">
               <input
