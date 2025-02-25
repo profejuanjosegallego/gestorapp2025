@@ -3,8 +3,8 @@ export function Acerca(){
 
         <section className="container my-5">
             <section className="row">
-                <section className="col-12 col-md-6">
-                    <img src="../../../../src/assets/img/mascota.webp" alt="imagen" className="img-fluid"/>
+                <section className="col-12 col-md-6 d-flex justify-content-center">
+                    <img src="../../../../src/assets/img/robot2.jpg" alt="imagen" className="img-fluid" style={{ maxWidth: "300px", height: "auto" }}/>
                 </section>
                 <section className="col-12 col-md-6">
                     <h2>GestorApp</h2>
