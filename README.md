@@ -9,6 +9,10 @@
   </tr>
 </table>
 
+![Screenshot 2025-02-24 183801](https://github.com/user-attachments/assets/757fe895-ee65-46bd-b4c3-280af513f4bc)
+
+
+
 # 🏨 The Wellhall - Resort & Spa Hotel
 
 Bienvenido a **The Wellhall**, una plataforma web para la gestión de reservas en un Resort & Spa Hotel. Esta aplicación permite a los usuarios conocer más sobre el hotel, explorar opciones de reserva a través del **Dashboard** y gestionar sus reservas en la sección de **Booking**.
