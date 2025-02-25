@@ -1,3 +1,10 @@
-h1{
-    padding: 10%;
-}
+.custom-container {
+    max-width: 80%; /* Ajusta el ancho según lo necesites */
+    background: white;
+  }
+
+  #button-booking {
+    background-color: #235a2e; 
+    border-color: #235a2e;
+    color: white;
+  }
