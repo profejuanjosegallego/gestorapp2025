@@ -1,0 +1,64 @@
+/* Estilos globales de la aplicación */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css');
+
+:root {
+  --primary-color: #0f3356;
+  --secondary-color: #4CAF50;
+  --light-bg: #f8f9fa;
+  --dark-text: #333;
+  --light-text: #6c757d;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--dark-text);
+  overflow-x: hidden;
+}
+
+/* Ajuste para el navbar fijo */
+body {
+  padding-top: 60px;
+}
+
+/* Enlaces generales */
+a {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Botones principales */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #0a2744;
+  border-color: #0a2744;
+}
+
+.btn-success {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-success:hover, .btn-success:focus {
+  background-color: #388e3c;
+  border-color: #388e3c;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Transiciones generales */
+.transition {
+  transition: all 0.3s ease;
+}
