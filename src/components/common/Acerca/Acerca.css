@@ -1,0 +1,24 @@
+/* Estilo para la sección principal */
+.acerca-container {
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+ /* Imagen de la mascota más grande */
+.acerca-imagen {
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Centrar la imagen en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .acerca-imagen {
+      max-width: 80%; /* Ajuste para móviles */
+    }
+  }
+  
+ 
