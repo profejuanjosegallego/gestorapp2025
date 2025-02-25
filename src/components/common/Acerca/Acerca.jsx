@@ -3,13 +3,14 @@ export function Acerca(){
 
         <section className="container my-5">
             <section className="row">
-                <section className="col-12 col-md-6">
-                    <img src="../../../../src/assets/img/mascota.webp" alt="imagen" className="img-fluid"/>
+                <section className="col-12 col-md-6 d-flex justify-content-center">
+                    <img src="../../../../src/assets/img/robot2.jpg" alt="imagen" className="img-fluid" style={{ maxWidth: "300px", height: "auto" }}/>
                 </section>
                 <section className="col-12 col-md-6">
                     <h2>GestorApp</h2>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa corporis cum accusantium, fuga ab eveniet reiciendis in culpa expedita necessitatibus nihil quaerat accusamus ullam aperiam illo adipisci sequi porro.
+                    <p className="text-justify px-2 py-3 lead fs-5">
+
+                    Descubre la forma más sencilla de reservar y disfrutar los espacios comunes de tu urbanización. Desde la piscina hasta el salón social, gestiona tus reservas en segundos, consulta disponibilidad en tiempo real y olvídate de los procesos manuales. ¡Transforma la manera en que interactúas con tu comunidad y aprovecha al máximo cada rincón de tu lugar favorito!
                     </p>
                 </section>
             </section>
