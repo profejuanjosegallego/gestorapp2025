@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.booking-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.booking-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff; /* Amarillo llamativo */
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form label {
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+}
+
+.booking-form select,
+.booking-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #3700ff;
+  border-radius: 5px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.booking-form button {
+  background-color: #0122ff;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.booking-form button:hover {
+  background-color: #ff9800;
+}
+
+.total-price,
+.booking-message {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.total-price {
+  color: #28a745;
+  background: rgba(72, 201, 176, 0.9);
+}
+
+.booking-message {
+  color: #fff;
+  background: rgba(255, 87, 34, 0.9);
+}

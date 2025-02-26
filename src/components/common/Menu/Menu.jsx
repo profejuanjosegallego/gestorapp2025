@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Menu.css";
 
 const Menu = () => {
@@ -6,9 +7,9 @@ const Menu = () => {
       {/* Menú de navegación */}
       <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             PerformanceParts
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,14 +24,14 @@ const Menu = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#home">
+                <Link className="nav-link active" to="/">
                   Inicio
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/catalogo">
                   Catálogo
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -44,34 +45,40 @@ const Menu = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/categorias/motores">
                       Motores
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/categorias/suspension">
                       Suspensión
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/categorias/frenos">
                       Frenos
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/categorias/accesorios">
                       Accesorios
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/contacto">
                   Contacto
-                </a>
+                </Link>
+              </li>
+              {/* ✅ Nuevo enlace a la página de reservas */}
+              <li className="nav-item">
+                <Link className="nav-link" to="/booking">
+                  Reservar Repuestos
+                </Link>
               </li>
             </ul>
             <form className="d-flex" role="search">
@@ -92,7 +99,9 @@ const Menu = () => {
       {/* Contenido principal */}
       <main className="container mt-5" id="home">
         <h1 className="text-center">Bienvenido a PerformanceParts</h1>
-        <p className="text-center">Encuentra los mejores repuestos de alto rendimiento para tu vehículo.</p>
+        <p className="text-center">
+          Encuentra los mejores repuestos de alto rendimiento para tu vehículo.
+        </p>
       </main>
     </>
   );

@@ -1,11 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Home } from "./components/pages/Home/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/pages/Home/Home";
+import Booking from "./components/pages/Booking/Booking"; // Asegúrate que esta ruta es correcta
+import Menu from "./components/common/Menu/Menu";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Home />
+    <Router>
+      <Menu /> {/* Menú siempre visible */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/booking" element={<Booking />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
