@@ -1,3 +1,28 @@
-.menu{
-    background-color: #123c64;
+/* Estilos del menú */
+.menu {
+    background-color: #2b3339;
+}
+
+/* Ajustes generales para ocupar toda la pantalla */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* El contenido principal se expande para empujar el footer hacia abajo */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer fijo en la parte inferior */
+.footer {
+    background-color: #2b3339;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
 }

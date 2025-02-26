@@ -1,22 +1,60 @@
-.banner{
-    background-image: url("../../../../src/assets/img/banner.jpg");
+/* Estilos del menú */
+.menu {
+    background-color: #2b3339;
+}
+
+/* Banner con imagen de fondo */
+.banner {
+    background-image: url("../../../assets/img/evo.jpg");
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     background-attachment: fixed;
-    padding: 25%;
+    height: 60vh; /* Ajuste de altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 1;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    filter: brightness(1.1) contrast(1.1); /* Mejora la visibilidad */
 }
 
-.banner::after{
+/* Oscurecer ligeramente el fondo */
+.banner::after {
     content: '';
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    z-index: -1;
-    opacity: 0.6;
-
+    background-color: rgba(0, 0, 0, 0.3); /* Oscurecimiento más suave */
+    z-index: 0;
 }
+
+/* Ajustes generales para ocupar toda la pantalla */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* El contenido principal se expande para empujar el footer hacia abajo */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer fijo en la parte inferior */
+.footer {
+    background-color: #2b3339;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+}
+

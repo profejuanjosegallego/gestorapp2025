@@ -1,18 +1,16 @@
-import './Banner.css'
-export function Banner(){
+import "./Banner.css";
 
-    return(
-
-        <>
-            <section className="banner">
-                <h2 className='text-white'>
-                    <span className="display-1">GestorApp</span>
-                    Aplicación para gestión de espacios en tu lugar
-                    de descanso...
-                </h2>
-
-            </section>
-        </>
-    )
-
+export function Banner() {
+  return (
+    <>
+      <section className="banner">
+        <div className="banner-content">
+          <h2 className="text-white display-1">PerformanceParts</h2>
+          <p className="text-white">
+            Potencia y calidad en cada repuesto para llevar tu auto al siguiente nivel.
+          </p>
+        </div>
+      </section>
+    </>
+  );
 }

@@ -1,12 +1,13 @@
 import "./Menu.css";
 
-export function Menu() {
+const Menu = () => {
   return (
     <>
+      {/* Menú de navegación */}
       <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Navbar
+            PerformanceParts
           </a>
           <button
             className="navbar-toggler"
@@ -22,13 +23,13 @@ export function Menu() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
+                <a className="nav-link active" aria-current="page" href="#home">
+                  Inicio
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Link
+                  Catálogo
                 </a>
               </li>
               <li className="nav-item dropdown">
@@ -39,17 +40,22 @@ export function Menu() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Categorías
                 </a>
                 <ul className="dropdown-menu">
                   <li>
                     <a className="dropdown-item" href="#">
-                      Action
+                      Motores
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                      Another action
+                      Suspensión
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Frenos
                     </a>
                   </li>
                   <li>
@@ -57,14 +63,14 @@ export function Menu() {
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                      Something else here
+                      Accesorios
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">
-                  Disabled
+                <a className="nav-link" href="#">
+                  Contacto
                 </a>
               </li>
             </ul>
@@ -72,16 +78,25 @@ export function Menu() {
               <input
                 className="form-control me-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Buscar repuestos..."
                 aria-label="Search"
               />
               <button className="btn btn-outline-success" type="submit">
-                Search
+                Buscar
               </button>
             </form>
           </div>
         </div>
       </nav>
+
+      {/* Contenido principal */}
+      <main className="container mt-5" id="home">
+        <h1 className="text-center">Bienvenido a PerformanceParts</h1>
+        <p className="text-center">Encuentra los mejores repuestos de alto rendimiento para tu vehículo.</p>
+      </main>
     </>
   );
-}
+};
+
+// ✅ Exportamos Menu como default
+export default Menu;
