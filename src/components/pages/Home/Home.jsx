@@ -6,6 +6,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'; // Importar Font Awesome
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importar estilos de Bootstrap
 import 'bootstrap/dist/js/bootstrap.bundle.min'; // Importar scripts de Bootstrap
 
+
 export function Home(){
 
     return(
@@ -16,6 +17,7 @@ export function Home(){
             <Banner></Banner>
             <Acerca></Acerca>
             <Footer></Footer>
+            
         
         </>
     )

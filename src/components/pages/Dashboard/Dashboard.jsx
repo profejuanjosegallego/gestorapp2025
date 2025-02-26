@@ -1,4 +1,6 @@
-export function Dashboard() {
+import React from 'react';
+
+export default function Dashboard() {
   return (
     <div className="card mb-3" style={{ maxWidth: 540 }}>
       <div className="row g-0">
