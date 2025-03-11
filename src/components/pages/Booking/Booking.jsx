@@ -6,7 +6,9 @@ const Booking = () => {
     return (
         <>
             <Header />
-            <div className='booking'>Booking</div>
+            <div className='booking'>
+                Booking
+            </div>
         </>
     )
 }
