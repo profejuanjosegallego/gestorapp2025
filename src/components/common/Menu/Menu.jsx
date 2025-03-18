@@ -28,11 +28,6 @@ const Menu = () => {
                   Inicio
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/catalogo">
-                  Catálogo
-                </Link>
-              </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -41,20 +36,23 @@ const Menu = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Categorías
+                  Categorías (Dash)
                 </a>
                 <ul className="dropdown-menu">
                   <li>
+                    
                     <Link className="dropdown-item" to="/categorias/motores">
                       Motores
                     </Link>
                   </li>
                   <li>
+                  <hr className="dropdown-divider" />
                     <Link className="dropdown-item" to="/categorias/suspension">
                       Suspensión
                     </Link>
                   </li>
                   <li>
+                  <hr className="dropdown-divider" />
                     <Link className="dropdown-item" to="/categorias/frenos">
                       Frenos
                     </Link>
@@ -69,15 +67,10 @@ const Menu = () => {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contacto">
-                  Contacto
-                </Link>
-              </li>
               {/* ✅ Nuevo enlace a la página de reservas */}
               <li className="nav-item">
                 <Link className="nav-link" to="/booking">
-                  Reservar Repuestos
+                  Reservar Repuestos (Booking)
                 </Link>
               </li>
             </ul>

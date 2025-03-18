@@ -17,8 +17,8 @@
 
 /* Personalización del gráfico de barras */
 .recharts-bar-rectangle {
-  stroke: #333;
-  stroke-width: 1px;
+  stroke: #e20909;
+  stroke-width: 2px;
 }
 
 .recharts-tooltip-label {

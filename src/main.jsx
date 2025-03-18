@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home/Home";
-import Booking from "./components/pages/Booking/Booking"; // Asegúrate que esta ruta es correcta
+import Booking from "./components/pages/Booking/Booking";
 import Menu from "./components/common/Menu/Menu";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
