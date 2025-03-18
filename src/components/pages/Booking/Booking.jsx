@@ -9,7 +9,7 @@ export const Booking=()=>{
         <>
 
             <section className="container">
-                <section className="row row-cols-1 row-cols-md-1 g-3">
+                <section className="row row-cols-1 row-cols-md-3 g-3">
                     {
                         datosAPI.map(function(espacioFisico){
                             return(
@@ -26,7 +26,7 @@ export const Booking=()=>{
                                                 <p>
                                                     {espacioFisico.descripcion}
                                                 </p>
-                                                <button className="btn btn-primary">Resrevar</button>
+                                                <button className="btn btn-primary">Reservar</button>
                                             </div>
                                         </div>
                                     </div>

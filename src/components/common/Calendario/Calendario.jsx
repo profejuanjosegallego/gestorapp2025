@@ -1,0 +1,54 @@
+import { useEffect,useState } from "react";
+import {calendario} from "./datosCalendario"
+
+export function Calendario(){
+
+    const[dias, setDias]=useState([])
+    const[horas, setHoras]=useState([])
+
+    useEffect(()=>{
+        setDias(calendario[0])
+        setHoras(calendario[1])
+    })
+
+
+    return(
+
+        <>
+
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        {
+                            dias.map((dia)=>{
+                                return <th>{dia}</th>
+                            })
+                        }
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    {
+                        horas.map((hora)=>{
+                            return <tr>
+                                <td>{hora}</td>
+                                {
+                                    dias.map((dia)=>{
+                                        return <td>
+                                            <button className="btn btn-success">reservar</button>
+                                        </td>
+                                    })
+                                }
+                            </tr>
+                        })
+                    }
+
+                </tbody>
+            </table>
+        
+        </>
+    )
+
+}
