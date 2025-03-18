@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./Menu.css";
-import { Banner } from "../Banner/Banner";
 
 const Menu = () => {
   return (
