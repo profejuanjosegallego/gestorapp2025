@@ -17,11 +17,11 @@
 
 /* Personalización del gráfico de barras */
 .recharts-bar-rectangle {
-  stroke: #e20909;
+  stroke: #4000ff;
   stroke-width: 2px;
 }
 
 .recharts-tooltip-label {
   font-weight: bold;
-  color: #ff5722;
+  color: #000000;
 }

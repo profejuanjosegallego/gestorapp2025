@@ -1,15 +1,16 @@
 import Menu from "../../common/Menu/Menu";
-import { Banner } from "../../common/Banner/Banner";
 import { Acerca } from "../../common/Acerca/Acerca";
 import { Footer } from "../../common/Footer/Footer";
 import Dashboard from "../../common/Dashboard/Dashboard"; // Asegúrate de que la ruta es correcta
+import { Banner } from "../../common/Banner/Banner";
 
 export function Home() {
   return (
     <>
       <Menu />
       <main>
-        <Banner />
+        {/* Se muestra aquí, verifica que no esté en Menu.jsx */}
+        <Banner/>
         <Acerca />
         <section>
           <Dashboard />

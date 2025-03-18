@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Menu.css";
+import { Banner } from "../Banner/Banner";
 
 const Menu = () => {
   return (
@@ -91,14 +92,10 @@ const Menu = () => {
 
       {/* Contenido principal */}
       <main className="container mt-5" id="home">
-        <h1 className="text-center">Bienvenido a PerformanceParts</h1>
-        <p className="text-center">
-          Encuentra los mejores repuestos de alto rendimiento para tu vehículo.
-        </p>
+              
       </main>
     </>
   );
 };
 
-// ✅ Exportamos Menu como default
 export default Menu;
