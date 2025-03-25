@@ -43,38 +43,39 @@ const Menu = () => {
                   Categorías (Dash)
                 </a>
                 <ul className="dropdown-menu">
-                  
                   <li>
                     <Link className="dropdown-item" to="/categorias/motores">
                       Motores
                     </Link>
                   </li>
-
                   <li>
                     <hr className="dropdown-divider" />
                     <Link className="dropdown-item" to="/categorias/suspension">
                       Suspensión
                     </Link>
                   </li>
-
                   <li>
                     <hr className="dropdown-divider" />
                     <Link className="dropdown-item" to="/categorias/frenos">
                       Frenos
                     </Link>
                   </li>
-
                   <li>
                     <hr className="dropdown-divider" />
                     <Link className="dropdown-item" to="/categorias/accesorios">
                       Accesorios
                     </Link>
                   </li>
-
                   <li>
                     <hr className="dropdown-divider" />
                     <Link className="dropdown-item" to="/dashboard">
                       Dashboard
+                    </Link>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                    <Link className="dropdown-item" to="../Calendario/Calendario.jsx">
+                      Calendario
                     </Link>
                   </li>
                 </ul>

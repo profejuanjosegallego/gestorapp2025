@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import "./Booking.css";
 
 const Booking = () => {
@@ -116,9 +117,12 @@ const Booking = () => {
     calculateTotalPrice(updatedCart);
   };
 
-  const handleReserve = () => {
-    if (cart.length === 0 || !phone.trim() || !email.trim() || !address.trim()) {
-      setMessage("⚠️ Completa todos los campos y agrega al menos un repuesto.");
+const handleReserve = () => {
+    const phoneRegex = /^[0-9]{10}$/; // Example regex for 10-digit phone numbers
+    if (cart.length === 0 || !phoneRegex.test(phone) || !email.trim() || !address.trim()) {
+
+    setMessage("⚠️ Por favor, ingresa un número de teléfono válido de 10 dígitos.");
+
       return;
     }
 

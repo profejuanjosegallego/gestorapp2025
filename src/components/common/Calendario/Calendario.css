@@ -55,4 +55,15 @@
     color: #fff;
     cursor: not-allowed;
   }
-    
+    /* Desactiva la tabla mientras se cargan los datos */
+.tabla-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Estilos para celdas reservadas */
+.celda-reservada {
+  background-color: #dc3545;
+  color: white;
+  cursor: not-allowed;
+}

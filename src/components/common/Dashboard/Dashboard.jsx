@@ -1,10 +1,9 @@
-import { Calendario } from "../Calendario/Calendario";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, LineChart, Line, PieChart, Pie, Cell, ResponsiveContainer, Legend } from "recharts";
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import "./Dashboard.css";  
 
-
 const data1 = [
+  // Example data for power increase
   { name: "Turbo", power: 50 },
   { name: "ECU", power: 35 },
   { name: "Escape", power: 20 },
@@ -12,6 +11,7 @@ const data1 = [
 ];
 
 const data2 = [
+  // Example data for engine comparison
   { name: "Motor Stock", power: 100 },
   { name: "Stage 1", power: 130 },
   { name: "Stage 2", power: 160 },
@@ -19,6 +19,7 @@ const data2 = [
 ];
 
 const data3 = [
+  // Example data for power distribution by component
   { name: "Turbo", value: 40 },
   { name: "ECU", value: 30 },
   { name: "Escape", value: 20 },
@@ -37,7 +38,7 @@ const Dashboard = () => {
             Aumento de Potencia
           </Typography>
           <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={data1}>
+            <BarChart data={data1} aria-label="Power Increase Chart">
               <XAxis dataKey="name" fontSize={12} tick={{ fill: "#333" }} />
               <YAxis fontSize={12} tick={{ fill: "#333" }} />
               <Tooltip cursor={{ fill: "#eeeeee" }} />
@@ -62,7 +63,7 @@ const Dashboard = () => {
             Comparación Motor Stock vs. Mejoras
           </Typography>
           <ResponsiveContainer width="100%" height={220}>
-            <LineChart data={data2}>
+            <LineChart data={data2} aria-label="Engine Comparison Chart">
               <XAxis dataKey="name" fontSize={12} tick={{ fill: "#333" }} />
               <YAxis fontSize={12} tick={{ fill: "#333" }} />
               <Tooltip cursor={{ stroke: "#ff0000", strokeWidth: 2 }} />
@@ -80,7 +81,7 @@ const Dashboard = () => {
             Distribución de Potencia por Componente
           </Typography>
           <ResponsiveContainer width="100%" height={220}>
-            <PieChart>
+            <PieChart aria-label="Power Distribution by Component Chart">
               <Pie data={data3} cx="50%" cy="50%" outerRadius={70} fill="#8884d8" dataKey="value">
                 {data3.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
