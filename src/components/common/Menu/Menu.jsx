@@ -23,11 +23,15 @@ const Menu = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+
+              {/* Link a inicio */}
               <li className="nav-item">
                 <Link className="nav-link active" to="/">
                   Inicio
                 </Link>
               </li>
+
+              {/* Categorías */}
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -39,41 +43,52 @@ const Menu = () => {
                   Categorías (Dash)
                 </a>
                 <ul className="dropdown-menu">
+                  
                   <li>
-                    
                     <Link className="dropdown-item" to="/categorias/motores">
                       Motores
                     </Link>
                   </li>
+
                   <li>
-                  <hr className="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                     <Link className="dropdown-item" to="/categorias/suspension">
                       Suspensión
                     </Link>
                   </li>
+
                   <li>
-                  <hr className="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                     <Link className="dropdown-item" to="/categorias/frenos">
                       Frenos
                     </Link>
                   </li>
+
                   <li>
                     <hr className="dropdown-divider" />
-                  </li>
-                  <li>
                     <Link className="dropdown-item" to="/categorias/accesorios">
                       Accesorios
                     </Link>
                   </li>
+
+                  <li>
+                    <hr className="dropdown-divider" />
+                    <Link className="dropdown-item" to="/dashboard">
+                      Dashboard
+                    </Link>
+                  </li>
                 </ul>
               </li>
-              {/* ✅ Nuevo enlace a la página de reservas */}
+
+              {/* Link a reservas */}
               <li className="nav-item">
                 <Link className="nav-link" to="/booking">
                   Reservar Repuestos (Booking)
                 </Link>
               </li>
             </ul>
+
+            {/* Buscador */}
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
@@ -91,7 +106,7 @@ const Menu = () => {
 
       {/* Contenido principal */}
       <main className="container mt-5" id="home">
-              
+        {/* Aquí puedes cargar el contenido de cada página por rutas */}
       </main>
     </>
   );
