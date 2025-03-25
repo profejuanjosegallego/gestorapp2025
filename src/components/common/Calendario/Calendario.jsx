@@ -13,7 +13,6 @@ export function Calendario() {
       setDias(datosCalendario[0]);
       setHoras(datosCalendario[1]);
 
-      // Inicializa disponibilidad solo si los datos están bien formateados
       const inicial = {};
       datosCalendario[1]?.forEach((hora, indexHora) => {
         datosCalendario[0]?.forEach((dia, indexDia) => {
@@ -38,12 +37,18 @@ export function Calendario() {
     }));
   };
 
+  console.log("Días:", dias);
+  console.log("Horas:", horas);
+  console.log("Disponibilidad:", disponibilidad);
+  console.log("Cargando:", cargando);
+
   return (
     <div className="calendario-container">
       <h2>Calendario de Disponibilidad</h2>
+      <p>Haz clic en los botones para reservar horarios.</p>
 
       {cargando ? (
-        <p>Cargando datos...</p>
+        <p>Cargando datos... Por favor, espera.</p>
       ) : (
         <div className="table-responsive">
           <table className={`calendario-tabla ${cargando ? "tabla-disabled" : ""}`}>
@@ -51,7 +56,9 @@ export function Calendario() {
               <tr>
                 <th>Hora</th>
                 {dias.map((dia, index) => (
-                  <th key={index}>{dia}</th>
+                  <th key={`dia-${index}`}>
+                    <button onClick={() => handleClick(index)}>{dia}</button>
+                  </th>
                 ))}
               </tr>
             </thead>
@@ -64,14 +71,10 @@ export function Calendario() {
                     const estaDisponible = disponibilidad[key];
 
                     return (
-                      <td
-                        key={indexDia}
-                        className={`celda-disponible ${
-                          estaDisponible ? "" : "celda-reservada"
-                        }`}
-                        onClick={() => handleClick(indexHora, indexDia)}
-                      >
-                        {estaDisponible ? "Disponible" : "Reservado"}
+                      <td key={indexDia}>
+                        <button onClick={() => handleClick(indexHora, indexDia)} className={estaDisponible ? "btn-disponible" : "btn-reservado"}>
+                          {estaDisponible ? "Reservar" : "Reservado"}
+                        </button>
                       </td>
                     );
                   })}

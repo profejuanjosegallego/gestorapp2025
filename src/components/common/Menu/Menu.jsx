@@ -74,7 +74,8 @@ const Menu = () => {
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
-                    <Link className="dropdown-item" to="../Calendario/Calendario.jsx">
+                    <Link className="dropdown-item" to="/calendario">
+
                       Calendario
                     </Link>
                   </li>

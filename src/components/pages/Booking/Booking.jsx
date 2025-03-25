@@ -67,13 +67,16 @@ const Booking = () => {
     setQuantity(qty);
   };
 
-  const handleAddToCart = () => {
+const handleAddToCart = (event) => {
+    event.preventDefault();
+
     if (!selectedPart) {
       setMessage("⚠️ Selecciona un repuesto antes de agregarlo.");
       return;
     }
 
-    const existing = cart.find(item => item.name === selectedPart.name);
+    const existing = cart.find(item => item.name === selectedPart?.name);
+
     let updatedCart;
 
     if (existing) {
@@ -118,8 +121,11 @@ const Booking = () => {
   };
 
 const handleReserve = () => {
-    const phoneRegex = /^[0-9]{10}$/; // Example regex for 10-digit phone numbers
-    if (cart.length === 0 || !phoneRegex.test(phone) || !email.trim() || !address.trim()) {
+    const phoneRegex = /^[0-9]{10}$/; // Regex for 10-digit phone numbers
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex for valid email format
+
+    if (cart.length === 0 || !phoneRegex.test(phone) || !emailRegex.test(email) || !address.trim()) {
+
 
     setMessage("⚠️ Por favor, ingresa un número de teléfono válido de 10 dígitos.");
 
