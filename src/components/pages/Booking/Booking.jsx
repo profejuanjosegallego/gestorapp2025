@@ -13,7 +13,7 @@ export const Booking=()=>{
                     {
                         datosAPI.map(function(espacioFisico){
                             return(
-                                <section className="col">
+                                <section className="col" key={espacioFisico.id}>
                                     <div className="card shadow h-100 p-4">
                                         <div className="row">
                                             <div className="col-6">

@@ -35,4 +35,12 @@ pull request
     }
 
 8. renderizar de forma dinamica la plantilla de espacio fisico segun el diseño entregado en ev1
+
 9. en las rutas debo tener una ruta default que cargue un componente 404
+
+10. Renderizar N calendarios segun el numero de datos del arreglo DATOSJSON (DASHBOARD)
+
+11. EN el calendario como capturar al hacer clic en algun boton de reserva
+el dia y la hora a la que esta asociado dicho boton
+
+12. Aplicar persistencia a todos los input del formulario

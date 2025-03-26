@@ -11,6 +11,8 @@ export function Calendario(){
         setHoras(calendario[1])
     })
 
+    //funcion que capture los dos valors (hora y fecha)
+
 
     return(
 
@@ -22,7 +24,7 @@ export function Calendario(){
                         <th>Hora</th>
                         {
                             dias.map((dia)=>{
-                                return <th>{dia}</th>
+                                return <th key={dia}>{dia}</th>
                             })
                         }
                     </tr>
@@ -32,11 +34,11 @@ export function Calendario(){
 
                     {
                         horas.map((hora)=>{
-                            return <tr>
+                            return <tr key={hora}>
                                 <td>{hora}</td>
                                 {
                                     dias.map((dia)=>{
-                                        return <td>
+                                        return <td key={dia}>
                                             <button className="btn btn-success">reservar</button>
                                         </td>
                                     })

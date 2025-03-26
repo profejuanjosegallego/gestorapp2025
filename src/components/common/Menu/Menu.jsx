@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 export function Menu() {
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <Link class="navbar-brand" to="/booking">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/booking">
             GestorApp
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -18,23 +18,28 @@ export function Menu() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/booking">
+              <li className="nav-item">
+                <Link className="nav-link" to="/booking">
                   Booking
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/dashboard">
+              <li className="nav-item">
+                <Link className="nav-link" to="/dashboard">
                   Dashboard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/formulario">
+                  Prueba del formulario
                 </Link>
               </li>
               
