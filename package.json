@@ -29,5 +29,17 @@
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
     "vite": "^6.0.5"
-  }
+  },
+  "description": "Este es un proyecto basado en Vite + React para una página web ficticia de un hotel, donde los usuarios pueden:",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dab960405/gestorapp2025.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dab960405/gestorapp2025/issues"
+  },
+  "homepage": "https://github.com/dab960405/gestorapp2025#readme"
 }

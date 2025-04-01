@@ -1,6 +1,6 @@
 import "./Menu.css";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/img/hotel-sukhdev-creative-logo-design__1_-removebg-preview (1).png"; // Asegúrate de que la ruta sea correcta
+import logo from "../../../assets/img/hotel-sukhdev-creative-logo-design__1_-removebg-preview (1).png";
 
 export function Menu() {
   return (
@@ -36,6 +36,12 @@ export function Menu() {
               <li className="nav-item">
                 <Link className="nav-link" to="/booking">
                   Booking
+                </Link>
+              </li>
+              {/* Nuevo ítem del menú para el formulario */}
+              <li className="nav-item">
+                <Link className="nav-link" to="/formulario">
+                  New Reservation
                 </Link>
               </li>
             </ul>

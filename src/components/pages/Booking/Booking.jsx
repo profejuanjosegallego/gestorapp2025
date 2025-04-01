@@ -1,71 +1,37 @@
-import "./Booking.css";
-import {Footer} from "../../common/Footer/Footer"
+import { datosAPI } from "../DashBoard/DatosJSON";
+import { useNavigate } from "react-router-dom";
+import './BookingCards.css';
 
-export function Booking(){
+export const Booking = () => {
+    const navigate = useNavigate();
 
-return(
-
-    <>
-       
-       <section className="booking">
-      <div className="container">
-        <h2 className="booking-titulo">Reserva tu Estancia</h2>
-        <p className="booking-subtitulo">
-          Encuentra la habitación perfecta para tu próxima estadía en Sukhdev.
-        </p>
-        <form className="booking-formulario">
-          <div className="row">
-            {/* Check-in */}
-            <div className="col-12 col-md-6 col-lg-3">
-              <label htmlFor="checkin" className="booking-etiqueta">
-                Check-in
-              </label>
-              <input
-                type="date"
-                id="checkin"
-                className="booking-input"
-                required
-              />
+    return (
+        <div className="booking-container">
+            <div className="booking-grid">
+                {datosAPI.map((espacio) => (
+                    <div className="booking-card" key={espacio.id}>
+                        <div className="booking-card-img-container">
+                            <img 
+                                src={espacio.foto || "https://via.placeholder.com/300x200?text=Sin+Imagen"} 
+                                className="booking-card-img" 
+                                alt={espacio.nombreEspacio}
+                            />
+                        </div>
+                        <div className="booking-card-body">
+                            <h3 className="booking-card-title">{espacio.nombreEspacio}</h3>
+                            <p className="booking-card-text">{espacio.descripcion}</p>
+                            <div className="booking-card-footer">
+                                <button 
+                                    onClick={() => navigate(`/dashboard/${espacio.id}`)}
+                                    className="booking-card-btn"
+                                >
+                                    Ver Horarios
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-
-            {/* Check-out */}
-            <div className="col-12 col-md-6 col-lg-3">
-              <label htmlFor="checkout" className="booking-etiqueta">
-                Check-out
-              </label>
-              <input
-                type="date"
-                id="checkout"
-                className="booking-input"
-                required
-              />
-            </div>
-
-            {/* Tipo de habitación */}
-            <div className="col-12 col-md-6 col-lg-3">
-              <label htmlFor="habitacion" className="booking-etiqueta">
-                Tipo de Habitación
-              </label>
-              <select id="habitacion" className="booking-input" required>
-                <option value="">Seleccione una opción</option>
-                <option value="sencilla">Habitación Sencilla</option>
-                <option value="doble">Habitación Doble</option>
-                <option value="suite">Suite</option>
-              </select>
-            </div>
-
-            {/* Botón de reserva */}
-            <div className="col-12 col-md-6 col-lg-3">
-              <button type="submit" className="booking-boton">
-                Reservar Ahora
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-    <Footer></Footer>
-    </>
-)
-
-}
+        </div>
+    );
+};
