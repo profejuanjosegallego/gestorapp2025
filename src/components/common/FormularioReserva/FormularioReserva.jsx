@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { useLocation } from "react-router-dom"
 export function FormularioReserva() {
 
 
@@ -17,14 +18,26 @@ export function FormularioReserva() {
     //3. Crear una variable de estado para controlar el estado de envio de datos del formualio
     const [formualrioHaSidoEnviado, setFormularioHaSidoEnviado] = useState(false)
 
+
+    const receptor=useLocation()
+    const {dia,hora}=receptor.state || {}
+    useEffect(()=>{
+        if(dia&&hora){
+            setDiaReserva(dia)
+            setHoraReserva(hora)
+        }
+    },[dia,hora])
+
     //4. Una rutina para enviar los datos a un API
     useEffect(() => {
-        alert("nos fimos pal api") //coming soon...
+        //alert("nos fimos pal api") //coming soon...
     }, [formualrioHaSidoEnviado])
 
     //5. una rutina para validar y capturar los datos del formulario (Crear JSON)
     function capturarDatosFormulario() {
 
+        //capturar los datos que escriba el usuario
+        //ACTUALIZAR EL JSON CON LOS DATOS QUEMADOS
     }
 
     return (
@@ -77,14 +90,24 @@ export function FormularioReserva() {
                                 <span className="input-group-text">
                                     <i className="bi bi-calendar-event-fill"></i>
                                 </span>
-                                <input type="text" className="form-control" placeholder="Dia Reserva" />
+                                <input 
+                                    type="text" 
+                                    className="form-control" 
+                                    placeholder="Dia Reserva" 
+                                    value={getDiaReserva}
+                                />
                             </div>
 
                             <div className="input-group mb-3">
                                 <span className="input-group-text">
                                     <i className="bi bi-clock-fill"></i>
                                 </span>
-                                <input type="text" className="form-control" placeholder="Hora Reserva" />
+                                <input 
+                                    type="text" 
+                                    className="form-control" 
+                                    placeholder="Hora Reserva" 
+                                    value={getHoraReserva}
+                                />
                             </div>
 
                             <div className="mb-3">
