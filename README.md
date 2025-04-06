@@ -34,3 +34,5 @@ Node.js (versión 16 o superior)
 npm o yarn
 
 Un navegador web moderno
+
+10. pintar tantos calendarios como espacios fisicos tenga registrados

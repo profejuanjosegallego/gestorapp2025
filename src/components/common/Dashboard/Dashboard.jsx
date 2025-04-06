@@ -1,10 +1,11 @@
 import './Dashboard.css'
+import { Calendario } from '../Calendario/Calendario'
 
 export function Dashboard(){
 
     return(
         <>
-        <div className="container mt-5">
+        {/* <div className="container mt-5">
   <div className="row">
     <div className="col-md-6">
       <img
@@ -27,8 +28,8 @@ export function Dashboard(){
       <button className="btn btn-primary custom-button">Reservar Ahora</button>
     </div>
   </div>
-</div>
-
+</div> */}
+      <Calendario></Calendario>
         </>
     )
 

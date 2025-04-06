@@ -7,7 +7,7 @@ export function Menu() {
       <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            Home
+            Gestor App
           </Link>
           <button
             className="navbar-toggler"
@@ -22,14 +22,24 @@ export function Menu() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+            <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/home">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/booking">
+                  Booking
+                </Link>
+              </li>          
+              <li className="nav-item">
                 <Link className="nav-link" to="/dash">
                   DashBoard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/formulario">
+                  Reserva
                 </Link>
               </li>
             
