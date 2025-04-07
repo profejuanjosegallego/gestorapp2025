@@ -39,6 +39,24 @@ export let datosAPI=Array(
         )
     },
 
+    {
+        id:3,
+        nombreEspacio:"microfutbol",
+        descripcion:"cancha de microfutbol para maximo 10 personas",
+        foto:"NAN",
+        capacidad:5,
+        calendario:Array(
+            {
+                dia:"miercoles",
+                hora:"14:00-15:00"
+            },
+            { 
+                dia:"jueves",
+                hora:"16:00-17:00"
+            }
+
+        )
+    },
    
 
 
