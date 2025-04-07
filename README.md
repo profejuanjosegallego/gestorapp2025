@@ -44,3 +44,7 @@ pull request
 el dia y la hora a la que esta asociado dicho boton
 
 12. Aplicar persistencia a todos los input del formulario
+
+13. Tenemos un arreglo que se llama DATOSJSON, debes cargar este JSON con los datos del formulario de reserva (agregar un elemento al arreglo de objetos)
+
+14. Pintar en rojo POR ESPACIO todos los horarios reservados
