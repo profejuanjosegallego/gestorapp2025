@@ -1,5 +1,5 @@
-.footer-bg{
-background-image: url("../../../../src/assets/img/ba22fdf7.avif");
+.footer-bg {
+    background-image: url("/src/assets/img/ba22fdf7.avif");
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
