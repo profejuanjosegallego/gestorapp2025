@@ -9,12 +9,13 @@ export let datosAPI=Array(
         calendario:Array(
             {
                 dia:"Martes",
-                hora:"1:00 pm - 2:00 pm"
+                hora:"13:00-14:00"
             },
             { 
                 dia:"Miercoles",
-                hora:"10:00 am - 11:00 am"
-            }
+                hora:"10:00-11:00"
+            },
+           
 
         )
     },
@@ -28,11 +29,11 @@ export let datosAPI=Array(
         calendario:Array(
             {
                 dia:"miercoles",
-                hora:"2:00 pm - 3:00 pm"
+                hora:"14:00-15:00"
             },
             { 
                 dia:"jueves",
-                hora:"4:00 pm - 5:00 pm"
+                hora:"16:00-17:00"
             }
 
         )

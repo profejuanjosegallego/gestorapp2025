@@ -1,3 +1,15 @@
 .menu{
     background-color: #461264;
 }
+
+.navbar {
+    position: fixed; /* Si la barra de opciones es fija */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegúrate de que esté encima del contenido */
+}
+
+
+.container {
+    margin-top: 80px; /* Ajusta este valor según la altura de la barra de opciones */
+}
