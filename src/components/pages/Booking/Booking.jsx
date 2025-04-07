@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Booking.css";
 export function Booking() {
-  const datosGuardados = localStorage.getItem("datos");
+  const datosGuardados = localStorage.getItem("datos") || [];
   const datos = datosGuardados ? JSON.parse(datosGuardados) : datosAPI;
   const navigation = useNavigate()
   function reservar(nombreEspacio){

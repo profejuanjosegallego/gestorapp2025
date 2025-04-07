@@ -3,8 +3,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { datosAPI } from "../DashBoard/DatosJSON";
 
 export function FormularioReserva() {
-  const datosGuardados = localStorage.getItem("datos");
-  const datos = datosGuardados ? JSON.parse(datosGuardados) : datosAPI;
+  const location = useLocation();
+  const { diaReserva, horaReserva, nombreEspacio,espacios } = location.state || {};
+  // const datosGuardados = espacios || datosAPI;
+  // const datos = datosGuardados ? JSON.parse(datosGuardados) : datosAPI;
   const [getResponsableReserva, setResponsableReserva] = useState("");
   const [getNumeroApartamento, setNumeroApartamento] = useState("");
   const [getNumeroContacto, setNumeroContacto] = useState("");
@@ -16,9 +18,8 @@ export function FormularioReserva() {
   const [getDatosFormulario, setDatosFormulario] = useState("");
   const [formularioHaSidoEnviado, setFormularioHaSidoEnviado] = useState(false);
   const navigation = useNavigate()
-  //inicializando el useLocation
-  const location = useLocation();
-  const { diaReserva, horaReserva, nombreEspacio } = location.state || {};
+  const datosGuardados = JSON.stringify(localStorage.getItem("datos")) || datosAPI; 
+  const espaciosObtenidos = espacios || datosGuardados
   useEffect(() => {
     if (diaReserva && horaReserva) {
       setDiaReserva(diaReserva);
@@ -48,20 +49,21 @@ export function FormularioReserva() {
       dia: getDiaReserva,
       hora: getHoraReserva,
     };
-    datos.some((dato, index) => {
+    espaciosObtenidos.some((dato, index) => {
       if (dato.nombreEspacio === nombreEspacio) {
         dato.calendario.push(objeto);
-        console.log("hola", datos);
+        const confirmarReserva = window.confirm(`Espacio reservado con éxito\n\nDetalles de la reserva:\nEspacio: ${nombreEspacio}\nDía: ${getDiaReserva}\nHora: ${getHoraReserva}\nResponsable: ${getResponsableReserva}`);
+
     
         // Eliminar el objeto de su posición original
-        datos.splice(index, 1);
+        // espaciosObtenidos.splice(index, 1);
         
         // Agregarlo al inicio del array
-        datos.unshift(dato);
+        // espaciosObtenidos.unshift(dato);
         
         
-        navigation("/dash",{state: {datos}});
-        localStorage.setItem('datos',JSON.stringify(datos))
+        navigation("/dash",{state: {espaciosObtenidos}});
+        localStorage.setItem("datos",JSON.stringify(espacios))
         return true; // Detiene el `some` después de encontrar el elemento
       }
     });
