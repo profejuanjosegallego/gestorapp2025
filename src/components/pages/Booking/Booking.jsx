@@ -16,11 +16,15 @@ export const Booking = () => {
                         return (
                             <section className="col" key={espacioFisico.id}>
                                 <div className="card shadow h-100 p-4">
-                                    <div className="row">
-                                        <div className="col-6">
+                                    {/* Foto en la parte superior */}
+                                    <div className="row mb-3">
+                                        <div className="col-12 text-center">
                                             <p>SIN FOTO</p>
                                         </div>
-                                        <div className="col-6">
+                                    </div>
+                                    {/* Información debajo */}
+                                    <div className="row">
+                                        <div className="col-12">
                                             <h3 className="fw-bold">
                                                 {espacioFisico.nombreEspacio}
                                             </h3>
