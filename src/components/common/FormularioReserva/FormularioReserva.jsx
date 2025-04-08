@@ -158,7 +158,7 @@ export function FormularioReserva() {
 
           <section className="col-12 col-md-4 align-self-center">
             <img
-              src="../../../../src/assets/img/reserva.webp"
+              src="src/assets/img/reserva.webp"
               alt="foto"
               className="img-fluid"
             />

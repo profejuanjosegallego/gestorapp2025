@@ -19,7 +19,13 @@ export const Booking = () => {
                                     {/* Foto en la parte superior */}
                                     <div className="row mb-3">
                                         <div className="col-12 text-center">
-                                            <p>SIN FOTO</p>
+                                            <img
+                                                src={espacioFisico.foto}
+                                                className="img-fluid rounded"
+                                                
+                                            />
+
+                                            
                                         </div>
                                     </div>
                                     {/* Información debajo */}

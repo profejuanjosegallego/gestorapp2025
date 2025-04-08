@@ -4,7 +4,7 @@ export let datosAPI=Array(
         id:1,
         nombreEspacio:"SAUNA",
         descripcion:"sauna familiar con vapores que enamoran",
-        foto:"NAN",
+        foto:"src/assets/img/sauna.webp",
         capacidad:10,
         calendario:Array(
             {
@@ -24,7 +24,7 @@ export let datosAPI=Array(
         id:2,
         nombreEspacio:"PISCINA",
         descripcion:"piscina olimpica de medidas reglamentarias",
-        foto:"NAN",
+        foto:"src/assets/img/psicina.jpg",
         capacidad:5,
         calendario:Array(
             {
@@ -43,7 +43,7 @@ export let datosAPI=Array(
         id:3,
         nombreEspacio:"MICROFÚTBOL",
         descripcion:"cancha de microfutbol para maximo 10 personas",
-        foto:"NAN",
+        foto:"src/assets/img/microfútbol.jpg",
         capacidad:10,
         calendario:Array(
             {
@@ -62,7 +62,7 @@ export let datosAPI=Array(
         id:4,
         nombreEspacio:"CINE",
         descripcion:"cine familiar con capacidad para 10 personas",
-        foto:"NAN",
+        foto:"src/assets/img/sala-cine-amc-lincoln-square-apjpg.webp",
         capacidad:10,
         calendario:Array(
             {
@@ -80,7 +80,7 @@ export let datosAPI=Array(
         id:5,
         nombreEspacio:"CLASES DE BAILE",
         descripcion:"clases de baile para maximo 20 personas",
-        foto:"NAN",
+        foto:"src/assets/img/baile.jpg",
         capacidad:20,
         calendario:Array(
             {
@@ -98,7 +98,7 @@ export let datosAPI=Array(
         id:6,
         nombreEspacio:"JOGA",
         descripcion:"clases de joga para maximo 10 personas",
-        foto:"NAN",
+        foto:"src/assets/img/joga.webp",
         capacidad:10,
         calendario:Array(
             {
@@ -116,7 +116,7 @@ export let datosAPI=Array(
         id:7,
         nombreEspacio:"TENIS DE MESA",
         descripcion:"cancha de tenis de mesa para maximo 2 personas",
-        foto:"NAN",
+        foto:"src/assets/img/tenis_mesa.jpg",
         capacidad:2,
         calendario:Array(
             {
@@ -134,7 +134,7 @@ export let datosAPI=Array(
         id:8,
         nombreEspacio:"VOLEIBOL",
         descripcion:"cancha de voleibol para maximo 10 personas",
-        foto:"NAN",
+        foto:"src/assets/img/voleibol.jpg",
         capacidad:10,
         calendario:Array(
             {
@@ -152,7 +152,7 @@ export let datosAPI=Array(
         id:9,
         nombreEspacio:"AEROBICOS",
         descripcion:"clases de aerobicos para maximo 10 personas",
-        foto:"NAN",
+        foto:"src/assets/img/aerobicos.jpg",
         capacidad:10,
         calendario:Array(
             {
@@ -170,7 +170,7 @@ export let datosAPI=Array(
         id:10,
         nombreEspacio:"BASKETBALL",
         descripcion:"cancha de microfutbol para maximo 10 personas",
-        foto:"NAN",
+        foto:"src/assets/img/basketball.jpg",
         capacidad:10,
         calendario:Array(
             {
