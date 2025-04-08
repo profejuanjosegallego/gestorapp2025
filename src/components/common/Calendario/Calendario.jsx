@@ -14,7 +14,7 @@ export function Calendario(){
     useEffect(()=>{
         setDias(calendario[0])
         setHoras(calendario[1])
-    })
+    },[])
 
     //funcion que capture los dos valores (hora y fecha)
     function crearReserva(dia, hora){

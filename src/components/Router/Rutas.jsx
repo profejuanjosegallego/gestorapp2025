@@ -5,9 +5,9 @@ import {Booking} from "../pages/Booking/Booking"
 
 import { Prueba } from "../pages/Prueba/Prueba"
 import { FormularioReserva } from "../common/FormularioReserva/FormularioReserva";
-// import { FormularioReserva } from "../common/FormularioReserva/FormularioReserva"
 
 import { Menu } from "../common/Menu/Menu"
+import { NotFound } from "../pages/NotFound/NotFound"
 
 export function Rutas() {
   return (
@@ -19,6 +19,7 @@ export function Rutas() {
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/pepe" element={<Prueba />} />
         <Route path="/formulario" element={<FormularioReserva />} />
+        <Route path="*" element={<NotFound />} /> {/* Ruta para la página no encontrada */}
       </Routes>
     </>
   );
