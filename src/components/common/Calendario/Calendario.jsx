@@ -1,71 +1,74 @@
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PropTypes from 'prop-types';
-import { calendario } from "./datosCalendario";
 import { useReservasContext } from "../../../Contexts/ReservasContext";
+import { DIAS, HORAS } from "./datosCalendario";
+import { datosAPI } from "../../pages/DashBoard/DatosJSON"; // Importa los datos
+import './Calendario.css';
 
-/**
- * Componente Calendario para mostrar horarios y manejar reservas.
- * @param {number} espacioId - ID del espacio físico a reservar.
- */
 export const Calendario = ({ espacioId }) => {
-    // Estados para días y horas (inicializados desde datosCalendario.js)
-    const [dias] = useState(calendario[0]);
-    const [horas] = useState(calendario[1]);
+    const navigate = useNavigate();
+    const { estaReservado } = useReservasContext();
     
-    // Contexto para manejar reservas
-    const { addReserva } = useReservasContext();
+    // Obtiene el nombre del espacio
+    const espacio = datosAPI.find(e => String(e.id) === String(espacioId));
+    const nombreEspacio = espacio?.nombreEspacio || 'Espacio no encontrado';
 
-    /**
-     * Maneja el click en botón de reserva.
-     * @param {string} dia - Día seleccionado (ej: "Lunes").
-     * @param {string} hora - Hora seleccionada (ej: "10:00 - 11:00").
-     */
     const handleReservar = (dia, hora) => {
-        addReserva(espacioId, dia, hora);
-        alert(`✅ Reserva agregada:\nEspacio: ${espacioId}\nDía: ${dia}\nHora: ${hora}`);
+        if (estaReservado(espacioId, dia, hora)) return;
+        
+        navigate(`/formulario/${espacioId}`, {
+            state: {
+                diaSeleccionado: dia,
+                horaSeleccionada: hora
+            }
+        });
     };
 
     return (
-        <table className="table table-bordered table-hover">
-            <thead className="table-dark">
-                <tr>
-                    <th>Hora</th>
-                    {dias.map((dia) => (
-                        <th key={dia}>{dia}</th>
-                    ))}
-                </tr>
-            </thead>
-            <tbody>
-                {horas.map((hora) => (
-                    <tr key={hora}>
-                        <td className="fw-bold">{hora}</td>
-                        {dias.map((dia) => (
-                            <td key={`${dia}-${hora}`}>
-                                <button
-                                    onClick={() => handleReservar(dia, hora)}
-                                    className="btn btn-sm btn-success w-100 py-2"
-                                    aria-label={`Reservar ${dia} a las ${hora}`}
-                                >
-                                    Reservar
-                                </button>
-                            </td>
+        <div className="calendario-container">
+            {/* Añade el título del espacio */}
+            <h2 className="titulo-espacio">{nombreEspacio}</h2>
+            
+            <table className="calendario-table">
+                <thead className="calendario-header">
+                    <tr>
+                        <th>Hora</th>
+                        {DIAS.map((dia) => (
+                            <th key={dia}>{dia}</th>
                         ))}
                     </tr>
-                ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {HORAS.map((hora) => (
+                        <tr key={hora}>
+                            <td className="hora-cell">{hora}</td>
+                            {DIAS.map((dia) => {
+                                const reservado = estaReservado(espacioId, dia, hora);
+                                return (
+                                    <td key={`${dia}-${hora}`} className="dia-cell">
+                                        <button
+                                            disabled={reservado}
+                                            className={`btn-reserva ${
+                                                reservado ? 'btn-reservado' : 'btn-disponible'
+                                            }`}
+                                            onClick={() => handleReservar(dia, hora)}
+                                        >
+                                            {reservado ? "Reservado" : "Reservar"}
+                                        </button>
+                                    </td>
+                                );
+                            })}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
     );
 };
 
-// Validación de props con PropTypes
 Calendario.propTypes = {
     espacioId: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
+        PropTypes.string,
+        PropTypes.number
     ]).isRequired
-};
-
-// Valor por defecto (opcional)
-Calendario.defaultProps = {
-    espacioId: 0 // Solo si espacioId puede ser opcional
 };

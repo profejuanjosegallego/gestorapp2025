@@ -1,0 +1,264 @@
+/* ============ VARIABLES DE DISEÑO PREMIUM ============ */
+:root {
+  --primary-color: #3498db;
+  --primary-dark: #1a5276;
+  --secondary-color: #e67e22;
+  --success-color: #27ae60;
+  --danger-color: #e74c3c;
+  --light-gray: #f8f9fa;
+  --medium-gray: #ecf0f1;
+  --dark-gray: #7f8c8d;
+  --text-dark: #2c3e50;
+  --white: #ffffff;
+  --gold-accent: #f1c40f;
+  --shadow-sm: 0 2px 15px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --border-radius: 8px;
+}
+
+/* ============ FORMULARIO PRINCIPAL ============ */
+.formulario-reserva-container {
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+                    url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.formulario-reserva {
+  width: 100%;
+  max-width: 800px;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  padding: 2.5rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.formulario-reserva::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.formulario-reserva h2 {
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.formulario-reserva h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-accent), var(--secondary-color));
+}
+
+/* ============ GRUPOS DE FORMULARIO ============ */
+.form-group {
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+/* ============ CAMPOS DE FORMULARIO ============ */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: var(--light-gray);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background-color: var(--white);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--dark-gray);
+  opacity: 0.7;
+}
+
+/* ============ CAMPOS BLOQUEADOS ============ */
+.campo-bloqueado {
+  background-color: var(--medium-gray);
+  color: var(--text-dark);
+  font-weight: 500;
+  cursor: not-allowed;
+}
+
+/* ============ SELECT PERSONALIZADO ============ */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237f8c8d'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+/* ============ TEXTAREA ============ */
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ============ BOTONES ============ */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.btn-reservar {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex-grow: 1;
+  margin-left: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-reservar:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-reservar:active {
+  transform: translateY(0);
+}
+
+.btn-cancelar {
+  padding: 1rem 2rem;
+  border: 2px solid var(--danger-color);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--danger-color);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex-grow: 1;
+  margin-right: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-cancelar:hover {
+  background-color: var(--danger-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-cancelar:active {
+  transform: translateY(0);
+}
+
+/* ============ ESTADOS DE CAMPOS ============ */
+option:disabled {
+  color: var(--danger-color);
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .formulario-reserva-container {
+    padding: 1rem;
+  }
+  
+  .formulario-reserva {
+    padding: 1.5rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn-cancelar,
+  .btn-reservar {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .formulario-reserva h2 {
+    font-size: 1.5rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem;
+  }
+}
+
+/* ============ EFECTOS ESPECIALES ============ */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+}
+
+.btn-reservar:focus {
+  animation: pulse 1.5s infinite;
+}
+
+/* ============ VALIDACIÓN ============ */
+input:invalid, select:invalid {
+  border-left: 4px solid var(--danger-color);
+}
+
+input:valid, select:valid {
+  border-left: 4px solid var(--success-color);
+}

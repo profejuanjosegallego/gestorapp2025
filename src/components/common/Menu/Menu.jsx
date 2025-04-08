@@ -8,7 +8,7 @@ export function Menu() {
       <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            <img src={logo} alt="Hotel Lux Logo" className="navbar-logo" />
+            <img src={logo} alt="Hotel Logo" className="navbar-logo" />
           </Link>
           <button
             className="navbar-toggler"
@@ -24,25 +24,14 @@ export function Menu() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/home">
-                  Home
-                </Link>
+                <Link className="nav-link" to="/home">Home</Link>
+              </li>
+              
+              <li className="nav-item">
+                <Link className="nav-link" to="/booking">Booking</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dash">
-                  Services
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/booking">
-                  Booking
-                </Link>
-              </li>
-              {/* Nuevo ítem del menú para el formulario */}
-              <li className="nav-item">
-                <Link className="nav-link" to="/formulario">
-                  New Reservation
-                </Link>
+                <Link className="nav-link" to="/dash">Services</Link>
               </li>
             </ul>
             <form className="d-flex search-form" role="search">
@@ -52,9 +41,7 @@ export function Menu() {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-search" type="submit">
-                Search
-              </button>
+              <button className="btn btn-search" type="submit">Search</button>
             </form>
           </div>
         </div>
