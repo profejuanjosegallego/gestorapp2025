@@ -27,3 +27,5 @@ npm run dev
 * GestorApp facilita la reserva de espacios recreativos para compartir con amigos, eliminando gestiones complicadas y permitiendo asegurar un lugar con solo unos clics. Planifica tu tiempo de descanso de manera eficiente y sin preocupaciones. *
 
 DIEGO ALEXANDER HIGUITA
+
+#Pintar tantos calendarios como espacios fisicos tenga registrados

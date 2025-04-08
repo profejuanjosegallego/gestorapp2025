@@ -24,13 +24,33 @@ export function Menu() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" to="/home">
+                <Link className="nav-link active" aria-current="page" to="/home">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard">
+                <Link className="nav-link active" aria-current="page" to="/booking">
+                  Booking
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" aria-current="page" to="/dashboard">
                   Dashboard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/Prueba">
+                  Prueba
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/formulario">
+                  Formulario Reserva
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/error">
+                  Error
                 </Link>
               </li>
             </ul>

@@ -1,21 +1,22 @@
 // main.jsx
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { BrowserRouter } from 'react-router-dom';
+import {ReservaProvider} from './components/common/FormularioReserva/Reserva';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-import { Home } from './components/pages/Home/Home';
-import Dashboard from './components/pages/Dashboard/Dashboard';
+import { Rutas } from './components/Router/Rutas';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/Home" element={<Home />} />  {/* Ruta para la página de inicio */}
-        <Route path="/dashboard" element={<Dashboard />} />  {/* Ruta para el Dashboard */}
-      </Routes>
-    </Router>
+    <ReservaProvider>
+      <BrowserRouter>
+        <Rutas />
+      </BrowserRouter>
+    </ReservaProvider>
   </StrictMode>
+  
 );

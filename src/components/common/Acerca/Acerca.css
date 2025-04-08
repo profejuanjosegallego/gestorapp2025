@@ -1,22 +1,40 @@
-.reserva-title{
-    font-size: 2.0rem; 
-    font-weight: bold; 
-    text-align: center;
-    color: #333; 
-    margin: 20px 0; 
-    line-height: 1.5; 
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);    
-  }
+.reserva-title {
+  font-size: 2.0rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
+  line-height: 1.3;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 .reserva-texto {
-    font-size: 1.3rem; 
-    font-weight: bold; 
-    text-align: center;
-    color: #333; 
-    margin: 20px 0; 
-    line-height: 1.5; 
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);   
+  font-size: 1.3rem;
+  font-weight: normal;
+  text-align: left;
+  color: #333;
+  margin: 20px 0;
+  line-height: 1.6;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .reserva-title {
+      font-size: 1.8rem;
+      margin: 15px 0;
   }
 
+  .reserva-texto {
+      font-size: 1.1rem;
+      margin: 15px 0;
+  }
 
-  
+  .container-fluid {
+      padding: 10px;
+  }
+}

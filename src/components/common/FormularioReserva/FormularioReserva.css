@@ -1,0 +1,23 @@
+/* Agregar un fondo gris claro y bordes redondeados al modal */
+.modal-content {
+    border-radius: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  /* Personalizar la tabla dentro del modal */
+  .table th, .table td {
+    vertical-align: middle;
+    text-align: left;
+  }
+  
+  /* Hacer que los botones tengan un toque de color */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
