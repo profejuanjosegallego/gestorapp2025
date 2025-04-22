@@ -2,6 +2,7 @@ import {Routes, Route} from "react-router-dom"
 import {Home} from "../pages/Home/Home"
 import {DashBoard} from "../pages/DashBoard/Dashboard"
 import {Booking} from "../pages/Booking/Booking"
+import { Galeria } from "../pages/Galeria/Galeria"
 
 import { Prueba } from "../pages/Prueba/Prueba"
 import { FormularioReserva } from "../common/FormularioReserva/FormularioReserva"
@@ -24,6 +25,7 @@ export function Rutas(){
                 <Route path="/dashboard" element={<DashBoard/>}></Route>
                 <Route path="/pepe" element={<Prueba/>}></Route>
                 <Route path="/formulario" element={<FormularioReserva/>}></Route>
+                <Route path="/galeria" element={<Galeria/>}></Route>
             </Routes>
 
         </>

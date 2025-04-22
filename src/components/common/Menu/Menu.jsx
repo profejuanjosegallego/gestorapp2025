@@ -42,6 +42,12 @@ export function Menu() {
                   Prueba del formulario
                 </Link>
               </li>
+
+              <li className="nav-item">
+                <Link className="nav-link" to="/galeria">
+                  Galeria
+                </Link>
+              </li>
               
               
             </ul>
