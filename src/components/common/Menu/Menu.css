@@ -7,9 +7,11 @@
     top: 0;
     width: 100%;
     z-index: 1000; /* Asegúrate de que esté encima del contenido */
+    
 }
 
 
 .container {
-    margin-top: 80px; /* Ajusta este valor según la altura de la barra de opciones */
+    margin-top: 80px;
+    / /* Ajusta este valor según la altura de la barra de opciones */
 }
