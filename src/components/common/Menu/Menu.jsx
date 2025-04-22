@@ -7,7 +7,7 @@ export function Menu() {
       <nav className="navbar navbar-expand-lg menu navbar-dark bg-info fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-          <i class="bi bi-buildings-fill"></i>
+          <i className="bi bi-buildings-fill"></i>
             Vita Bella
           </Link>
           <button
@@ -36,6 +36,11 @@ export function Menu() {
               <li className="nav-item">
                 <Link className="nav-link" to="/booking">
                   Booking
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/formulario">
+                  Formulario
                 </Link>
               </li>
             </ul>
