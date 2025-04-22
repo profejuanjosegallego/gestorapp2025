@@ -7,6 +7,7 @@ import { Menu } from "../common/Menu/Menu"
 import { FormularioReserva } from "../common/FormularioReserva/FormularioReserva"
 import { Calendario } from "../common/Calendario/Calendario"
 import { Error } from "../pages/Error/Error"
+import { Galeria } from "../pages/Galeria/Galeria"
 
 
 
@@ -26,6 +27,7 @@ export function Rutas(){
                 <Route path="/calerndario" element={<Calendario/>}></Route>
                 <Route path="/formulario" element={<FormularioReserva/>}></Route>
                 <Route path="/error" element={<Error />}></Route>
+                <Route path="/galeria" element={<Galeria />}></Route>
             </Routes>
             
 

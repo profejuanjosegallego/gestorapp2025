@@ -53,6 +53,11 @@ export function Menu() {
                   Error
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/galeria">
+                  Galeria
+                </Link>
+              </li>
             </ul>
             <form className="d-flex" role="search">
               <input
