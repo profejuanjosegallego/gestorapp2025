@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useReservasContext } from "../../../Contexts/ReservasContext";
-import { datosAPI } from "../../pages/DashBoard/DatosJSON";
+import { datosAPI } from "../../pages/dashboard/DatosJSON";
 import { DIAS, HORAS } from "../Calendario/datosCalendario";
 import { FaCheckCircle, FaTimesCircle, FaTimes } from 'react-icons/fa';
 import './FormularioReserva.css';

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { useReservasContext } from "../../../Contexts/ReservasContext";
 import { DIAS, HORAS } from "./datosCalendario";
-import { datosAPI } from "../../pages/DashBoard/DatosJSON"; // Importa los datos
+import { datosAPI } from "../../pages/dashboard/DatosJSON"; // Importa los datos
 import './Calendario.css';
 
 export const Calendario = ({ espacioId }) => {
