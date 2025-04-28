@@ -4,7 +4,7 @@ import { DashBoard } from "../pages/dashboard/dashboard.jsx";
 import { Menu } from "../common/Menu/menu.jsx";
 import { Booking } from "../pages/Booking/booking.jsx";
 import { NotFound } from "../common/NotFound/notfound.jsx";
-import { ReservasProvider } from "../../Contexts/reservascontext.jsx";
+import { ReservasProvider } from "../../Contexts/ReservasContext.jsx";
 import { FormularioReserva } from "../common/FormularioReserva/formularioreserva.jsx";
 
 export function Router() {

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from 'prop-types';
-import { useReservasContext } from "../../../Contexts/reservascontext";
+import { useReservasContext } from "../../../Contexts/ReservasContext.jsx";
 import { DIAS, HORAS } from "./datosCalendario";
 import { datosAPI } from "../../pages/dashboard/DatosJSON"; // Importa los datos
 import './Calendario.css';
