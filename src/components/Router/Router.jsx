@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Home } from "../pages/Home/Home";
-import { DashBoard } from "../pages/DashBoard/DashBoard.jsx";
+import { DashBoard } from "../pages/DashBoard/dashboard.jsx";
 import { Menu } from "../common/Menu/Menu";
 import { Booking } from "../pages/Booking/Booking";
 import { NotFound } from "../common/NotFound/NotFound.jsx";
