@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { datosAPI } from "../dashboard/DatosJSON";
+import { datosAPI } from "../DashBoard/DatosJSON";
 import './BookingCards.css';
 
 export const Booking = () => {

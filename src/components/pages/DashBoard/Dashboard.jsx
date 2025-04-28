@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams } from "react-router-dom";
-import { Calendario } from "../../common/Calendario/Calendario";
-import { datosAPI } from "./DatosJSON";
+import { Calendario } from "../../common/Calendario/Calendario.jsx";
+import { datosAPI } from "./DatosJSON.js";
 
 
 
