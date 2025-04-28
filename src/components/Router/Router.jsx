@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Home } from "../pages/Home/home.jsx";
 import { DashBoard } from "../pages/dashboard/dashboard.jsx";
-import { Menu } from "../common/Menu/Menu";
+import { Menu } from "../common/Menu/menu.jsx";
 import { Booking } from "../pages/Booking/booking.jsx";
 import { NotFound } from "../common/NotFound/notfound.jsx";
 import { ReservasProvider } from "../../Contexts/reservascontext.jsx";
