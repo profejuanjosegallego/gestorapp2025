@@ -23,65 +23,18 @@ const Menu = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-
               {/* Link a inicio */}
               <li className="nav-item">
                 <Link className="nav-link active" to="/">
                   Inicio
                 </Link>
               </li>
-
-              {/* Categorías */}
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Categorías (Dash)
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="/categorias/motores">
-                      Motores
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                    <Link className="dropdown-item" to="/categorias/suspension">
-                      Suspensión
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                    <Link className="dropdown-item" to="/categorias/frenos">
-                      Frenos
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                    <Link className="dropdown-item" to="/categorias/accesorios">
-                      Accesorios
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                    <Link className="dropdown-item" to="/dashboard">
-                      Dashboard
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                    <Link className="dropdown-item" to="/calendario">
-
-                      Calendario
-                    </Link>
-                  </li>
-                </ul>
+              {/* Link a Calendario */}
+              <li className="nav-item">
+                <Link className="nav-link" to="/Calendario">
+                  Calendario
+                </Link>
               </li>
-
               {/* Link a reservas */}
               <li className="nav-item">
                 <Link className="nav-link" to="/booking">

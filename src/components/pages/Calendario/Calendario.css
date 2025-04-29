@@ -1,0 +1,40 @@
+/* Calendario.css */
+.calendar-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-section {
+    margin-bottom: 30px;
+  }
+  
+  .reservation-section {
+    margin-top: 30px;
+  }
+  
+  .reservations-list {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .reservations-list h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .reservations-list ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .reservations-list li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  

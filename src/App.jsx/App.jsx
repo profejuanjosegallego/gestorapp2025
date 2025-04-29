@@ -1,27 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import Menu from "./components/Menu";
-
-import Dashboard from "./components/Dashboard"; // o la ruta correspondiente
-import Home from "./components/Home"; // ejemplo
-import Booking from "./components/Booking"; // ejemplo
-import Calendario from "./components/common/Calendario/Calendario"; // Import the Calendario component
+import "bootstrap-icons/font/bootstrap-icons.css";
+import Menu from "../common/Menu/Menu";
+import Dashboard from "../common/Dashboard/Dashboard";
+import Home from "../pages/Home/Home";
+import Calendario from "../pages/Calendario/Calendario";
+import Booking from "../pages/Booking/Booking";
 
 function App() {
   return (
     <Router>
       <Menu />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/calendario" element={<Calendario />} /> {/* Add route for Calendario */}
-        {/* Rutas de categorías */}
-        <Route path="/categorias/motores" element={<div>Motores</div>} />
-        <Route path="/categorias/suspension" element={<div>Suspensión</div>} />
-        <Route path="/categorias/frenos" element={<div>Frenos</div>} />
-        <Route path="/categorias/accesorios" element={<div>Accesorios</div>} />
-      </Routes>
+      <div className="container mt-5">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/calendario" element={<Calendario />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
