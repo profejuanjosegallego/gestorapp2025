@@ -1,20 +1,52 @@
 /* Estilos del menú */
 .menu {
-    background-color: #000000;
+    background-color: #000000; /* Fondo negro */
+    color: white;
 }
 
-/* Ajustes generales para ocupar toda la pantalla */
+.menu .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.menu .navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.9s, border-radius 0.3s;
+}
+
+.menu .navbar-nav .nav-link:hover {
+    background-color: #2600ff; /* Azul intenso para hover */
+    border-radius: 10px;
+}
+
+.menu .btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.menu .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url("/ruta/de/tu/imagen.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
-/* El contenido principal se expande para empujar el footer hacia abajo */
+/* El contenido principal */
 main {
     flex: 1;
     padding: 20px;
+    margin-top: -40px; /* Ajusta según la altura de tu navbar */
+    color: #000000;
 }
 
 /* Footer fijo en la parte inferior */
@@ -25,4 +57,27 @@ main {
     padding: 15px 0;
     width: 100%;
     position: relative;
+    bottom: 0;
+}
+
+/* Estilos generales para el contenedor */
+.container-fluid {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para el input de búsqueda */
+.menu .form-control {
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+/* Mejoras de Responsive */
+@media (max-width: 991px) {
+    .menu .navbar-nav {
+        text-align: center;
+    }
+
+    .menu .form-control {
+        margin-top: 10px;
+    }
 }

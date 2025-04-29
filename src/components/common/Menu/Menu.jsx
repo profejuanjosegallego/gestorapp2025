@@ -4,31 +4,32 @@ import "./Menu.css";
 const Menu = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
+      <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top shadow-sm">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            PerformanceParts
+          <Link className="navbar-brand fw-bold fs-4" to="/">
+            Performance Parts
           </Link>
           <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" to="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Inicio
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/calendario">Agenda 
+                <Link className="nav-link" to="/calendario">
+                  Agenda
                 </Link>
               </li>
               <li className="nav-item">
@@ -42,9 +43,9 @@ const Menu = () => {
                 className="form-control me-2"
                 type="search"
                 placeholder="Buscar repuestos..."
-                aria-label="Search"
+                aria-label="Buscar"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-light" type="submit">
                 Buscar
               </button>
             </form>
@@ -52,7 +53,8 @@ const Menu = () => {
         </div>
       </nav>
 
-      <main className="container mt-5" id="home">
+      {/* Contenido principal */}
+      <main className="container" id="home" style={{ paddingTop: "100px" }}>
         {/* Aquí puedes cargar el contenido de cada página por rutas */}
       </main>
     </>
