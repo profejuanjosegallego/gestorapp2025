@@ -7,6 +7,7 @@ import Menu from "./components/common/Menu/Menu";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import Calendario from "./components/pages/Calendario/Calendario";
+import { Catalogo } from "./components/common/Catalogo/Catalogo";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/booking" element={<Booking />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/calendario" element={<Calendario />} />
+        <Route path="/catalogo" element={<Catalogo />} />
       </Routes>
     </Router>
   </React.StrictMode>

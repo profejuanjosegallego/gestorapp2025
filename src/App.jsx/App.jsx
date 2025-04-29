@@ -5,6 +5,7 @@ import Dashboard from "../common/Dashboard/Dashboard";
 import Home from "../pages/Home/Home";
 import Calendario from "../pages/Calendario/Calendario";
 import Booking from "../pages/Booking/Booking";
+import { Catalogo } from "../components/common/Catalogo/Catalogo";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/calendario" element={<Calendario />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/catalogo" element={<Catalogo />} />
         </Routes>
       </div>
     </Router>

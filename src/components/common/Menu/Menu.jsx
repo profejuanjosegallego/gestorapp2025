@@ -33,6 +33,11 @@ const Menu = () => {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/catalogo">
+                  Catalogo
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/booking">
                   Reservar Repuestos
                 </Link>
