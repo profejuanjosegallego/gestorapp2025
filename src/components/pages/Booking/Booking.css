@@ -19,8 +19,8 @@
 
 .video-section {
   flex: 1;
-  min-width: 200px;
-  max-width: 342px;
+  min-width: 400px;
+  max-width: 600px;
 }
 
 .video-parcial {
@@ -40,12 +40,6 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.selection-form,
-.booking-form,
-.cart-container {
-  margin-bottom: 20px;
-}
-
 .selection-form select,
 .selection-form input,
 .booking-form input {
@@ -57,8 +51,8 @@
   border-radius: 8px;
 }
 
-.selection-form button,
-.booking-form button {
+.booking-form button,
+.form-section button {
   padding: 12px;
   background-color: #007bff;
   color: white;
@@ -69,9 +63,13 @@
   cursor: pointer;
 }
 
-.selection-form button:hover,
-.booking-form button:hover {
+.booking-form button:hover,
+.form-section button:hover {
   background-color: #0056b3;
+}
+
+.cart-container {
+  margin-top: 20px;
 }
 
 .cart-item {
@@ -99,4 +97,37 @@
   font-weight: bold;
   margin-top: 20px;
   font-size: 1.1em;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.selector-repuestos {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #1100ff;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  margin-bottom: 2px;
+  transition: border-color 0.3s;
+}
+
+.selector-repuestos:focus {
+  border-color: #0056b3;
+  outline: none;
 }

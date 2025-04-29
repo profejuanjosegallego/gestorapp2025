@@ -1,5 +1,5 @@
 import { useState } from "react";
-import fondoVideo from "/src/assets/Videos/Download.mp4"; // IMPORTA BIEN EL VIDEO LOCAL
+import fondoVideo from "/src/assets/Videos/VID-20250428-WA0014.mp4";
 import "./Booking.css";
 
 const Booking = () => {
@@ -51,39 +51,37 @@ const Booking = () => {
     { name: "Manómetros (presión turbo, AFR, temp aceite)", price: 800000 }
   ];
 
-  const handlePartChange = (event) => {
-    const selected = parts.find((p) => p.name === event.target.value);
+  const handlePartChange = (e) => {
+    const selected = parts.find(p => p.name === e.target.value);
     setSelectedPart(selected);
   };
 
-  const handleQuantityChange = (event) => {
-    const qty = Math.max(1, parseInt(event.target.value, 10) || 1);
+  const handleQuantityChange = (e) => {
+    const qty = Math.max(1, parseInt(e.target.value, 10) || 1);
     setQuantity(qty);
   };
 
-  const handleAddToCart = (event) => {
-    event.preventDefault();
+  const handleAddToCart = (e) => {
+    e.preventDefault();
 
     if (!selectedPart) {
       setMessage("⚠️ Selecciona un repuesto antes de agregarlo.");
       return;
     }
 
-    const existing = cart.find(item => item.name === selectedPart?.name);
-
+    const existing = cart.find(item => item.name === selectedPart.name);
     let updatedCart;
 
     if (existing) {
-      updatedCart = cart.map(item => {
-        if (item.name === selectedPart.name) {
-          return {
-            ...item,
-            quantity: item.quantity + quantity,
-            subtotal: (item.quantity + quantity) * item.price
-          };
-        }
-        return item;
-      });
+      updatedCart = cart.map(item =>
+        item.name === selectedPart.name
+          ? {
+              ...item,
+              quantity: item.quantity + quantity,
+              subtotal: (item.quantity + quantity) * item.price
+            }
+          : item
+      );
     } else {
       updatedCart = [
         ...cart,
@@ -103,8 +101,8 @@ const Booking = () => {
     setMessage("");
   };
 
-  const calculateTotalPrice = (cartItems) => {
-    const total = cartItems.reduce((acc, item) => acc + item.subtotal, 0);
+  const calculateTotalPrice = (items) => {
+    const total = items.reduce((sum, item) => sum + item.subtotal, 0);
     setTotalPrice(total);
   };
 
@@ -118,8 +116,8 @@ const Booking = () => {
     const phoneRegex = /^[0-9]{10}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (cart.length === 0 || !phoneRegex.test(phone) || !emailRegex.test(email) || !address.trim()) {
-      setMessage("⚠️ Por favor, completa todos los campos correctamente: número de teléfono válido de 10 dígitos, correo electrónico válido y dirección.");
+    if (!phoneRegex.test(phone) || !emailRegex.test(email) || !address.trim() || cart.length === 0) {
+      setMessage("⚠️ Completa todos los campos correctamente.");
       return;
     }
 
@@ -139,41 +137,35 @@ const Booking = () => {
     <div className="booking-container">
       <h2 className="booking-title">Reservar Repuestos</h2>
 
-      <div className="booking-content">
-        {/* VIDEO A LA IZQUIERDA */}
+      <div className="booking-content animate-fadeInUp">
         <div className="video-section">
-          <video autoPlay loop muted playsInline className="video-parcial">
+          <video className="video-parcial" autoPlay>
             <source src={fondoVideo} type="video/mp4" />
             Tu navegador no soporta el video.
           </video>
         </div>
 
-        {/* FORMULARIO A LA DERECHA */}
         <div className="form-section">
-          {/* FORMULARIO DE SELECCIÓN */}
-          <div className="selection-form">
-            <label>Selecciona el repuesto:</label>
-            <select onChange={handlePartChange} value={selectedPart?.name || ""}>
-              <option value="">-- Seleccionar --</option>
-              {parts.map((part) => (
-                <option key={part.name} value={part.name}>
-                  {part.name} - {formatPrice(part.price)}
-                </option>
-              ))}
-            </select>
+          <label>Selecciona el repuesto:</label>
+          <select className="selector-repuestos" onChange={handlePartChange} value={selectedPart?.name || ""}>
+            <option value="">-- Seleccionar --</option>
+            {parts.map(part => (
+              <option key={part.name} value={part.name}>
+                {part.name} - {formatPrice(part.price)}
+              </option>
+            ))}
+          </select>
 
-            <label>Cantidad:</label>
-            <input
-              type="number"
-              min="1"
-              value={quantity}
-              onChange={handleQuantityChange}
-            />
+          <label>Cantidad:</label>
+          <input
+            type="number"
+            min="1"
+            value={quantity}
+            onChange={handleQuantityChange}
+          />
 
-            <button type="button" onClick={handleAddToCart}>Agregar al carrito</button>
-          </div>
+          <button onClick={handleAddToCart}>Agregar al carrito</button>
 
-          {/* CARRITO */}
           {cart.length > 0 && (
             <div className="cart-container">
               <h3>Repuestos Seleccionados:</h3>
@@ -190,42 +182,19 @@ const Booking = () => {
             </div>
           )}
 
-          {/* FORMULARIO DE DATOS */}
           <form className="booking-form" onSubmit={(e) => e.preventDefault()}>
             <label>Teléfono:</label>
-            <input
-              type="tel"
-              placeholder="Tu número de teléfono"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
+            <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} placeholder="Ej: 3101234567" />
 
-            <label>Correo Electrónico:</label>
-            <input
-              type="email"
-              placeholder="Tu correo electrónico"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+            <label>Correo electrónico:</label>
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Ej: correo@dominio.com" />
 
-            <label>Dirección de Envío:</label>
-            <input
-              type="text"
-              placeholder="Tu dirección"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-            />
+            <label>Dirección:</label>
+            <input type="text" value={address} onChange={e => setAddress(e.target.value)} placeholder="Dirección de entrega" />
 
-            <button
-              type="button"
-              onClick={handleReserve}
-              disabled={cart.length === 0 || !phone || !email || !address}
-            >
-              Reservar
-            </button>
+            <button type="button" onClick={handleReserve} disabled={cart.length === 0}>Reservar</button>
           </form>
 
-          {/* MENSAJE */}
           {message && <p className="booking-message">{message}</p>}
         </div>
       </div>

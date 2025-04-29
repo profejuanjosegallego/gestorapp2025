@@ -31,8 +31,8 @@ const CalendarioAgenda = () => {
   return (
     <div className="agenda-page">
       {/* Video de fondo */}
-      <video className="video-background" autoPlay muted loop>
-        <source src="/src/assets/Videos/Fondo.mp4" type="video/mp4" />
+      <video className="video-background" autoPlay loop>
+        <source src="/src/assets/Videos/VID-20250428-WA0013.mp4" type="video/mp4" />
         Tu navegador no soporta el video de fondo.
       </video>
 
