@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import fondoVideo from "/src/assets/Videos/Download.mp4"; // IMPORTA BIEN EL VIDEO LOCAL
 import "./Booking.css";
 
 const Booking = () => {
@@ -13,7 +13,6 @@ const Booking = () => {
   const [message, setMessage] = useState("");
 
   const parts = [
-    // Repuestos individuales
     { name: "Turbo", price: 2500000 },
     { name: "ECU", price: 1800000 },
     { name: "Escape deportivo", price: 1200000 },
@@ -28,8 +27,6 @@ const Booking = () => {
     { name: "Pistones forjados", price: 3000000 },
     { name: "Bielas forjadas", price: 2700000 },
     { name: "Válvulas de escape de titanio", price: 1600000 },
-  
-    // Kits de performance
     { name: "Kit Turbo Completo", price: 8000000 },
     { name: "Kit Suspensión Coilover", price: 6000000 },
     { name: "Kit Big Brake (frenos de alto rendimiento)", price: 7500000 },
@@ -39,8 +36,6 @@ const Booking = () => {
     { name: "Kit Repro Stage 3", price: 4500000 },
     { name: "Kit de Distribución reforzada", price: 2200000 },
     { name: "Kit de Admisión directa", price: 1300000 },
-  
-    // Productos aftermarket
     { name: "Volante deportivo", price: 900000 },
     { name: "Pedales Racing en aluminio", price: 250000 },
     { name: "Barra estabilizadora delantera", price: 700000 },
@@ -55,7 +50,6 @@ const Booking = () => {
     { name: "Spoiler trasero ajustable", price: 1700000 },
     { name: "Manómetros (presión turbo, AFR, temp aceite)", price: 800000 }
   ];
-  
 
   const handlePartChange = (event) => {
     const selected = parts.find((p) => p.name === event.target.value);
@@ -67,7 +61,7 @@ const Booking = () => {
     setQuantity(qty);
   };
 
-const handleAddToCart = (event) => {
+  const handleAddToCart = (event) => {
     event.preventDefault();
 
     if (!selectedPart) {
@@ -120,15 +114,12 @@ const handleAddToCart = (event) => {
     calculateTotalPrice(updatedCart);
   };
 
-const handleReserve = () => {
-    const phoneRegex = /^[0-9]{10}$/; // Regex for 10-digit phone numbers
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex for valid email format
+  const handleReserve = () => {
+    const phoneRegex = /^[0-9]{10}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (cart.length === 0 || !phoneRegex.test(phone) || !emailRegex.test(email) || !address.trim()) {
-
-
-    setMessage("⚠️ Por favor, ingresa un número de teléfono válido de 10 dígitos.");
-
+      setMessage("⚠️ Por favor, completa todos los campos correctamente: número de teléfono válido de 10 dígitos, correo electrónico válido y dirección.");
       return;
     }
 
@@ -148,83 +139,96 @@ const handleReserve = () => {
     <div className="booking-container">
       <h2 className="booking-title">Reservar Repuestos</h2>
 
-      {/* SELECCIÓN DE REPUESTOS */}
-      <div className="selection-form">
-        <label>Selecciona el repuesto:</label>
-        <select onChange={handlePartChange} value={selectedPart?.name || ""}>
-          <option value="">-- Seleccionar --</option>
-          {parts.map((part) => (
-            <option key={part.name} value={part.name}>
-              {part.name} - {formatPrice(part.price)}
-            </option>
-          ))}
-        </select>
-
-        <label>Cantidad:</label>
-        <input
-          type="number"
-          min="1"
-          value={quantity}
-          onChange={handleQuantityChange}
-        />
-
-        <button type="button" onClick={handleAddToCart}>Agregar al carrito</button>
-      </div>
-
-      {/* CARRITO DE REPUESTOS */}
-      {cart.length > 0 && (
-        <div className="cart-container">
-          <h3>Repuestos Seleccionados:</h3>
-          <ul>
-            {cart.map(item => (
-              <li key={item.name} className="cart-item">
-                <span>{item.name} ({item.quantity} x {formatPrice(item.price)})</span>
-                <span>{formatPrice(item.subtotal)}</span>
-                <button onClick={() => handleRemoveItem(item.name)}>Eliminar</button>
-              </li>
-            ))}
-          </ul>
-          <p className="total-price">Total: {formatPrice(totalPrice)}</p>
+      <div className="booking-content">
+        {/* VIDEO A LA IZQUIERDA */}
+        <div className="video-section">
+          <video autoPlay loop muted playsInline className="video-parcial">
+            <source src={fondoVideo} type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
         </div>
-      )}
 
-      {/* FORMULARIO DE RESERVA */}
-      <form className="booking-form" onSubmit={(e) => e.preventDefault()}>
-        <label>Teléfono:</label>
-        <input
-          type="tel"
-          placeholder="Tu número de teléfono"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
+        {/* FORMULARIO A LA DERECHA */}
+        <div className="form-section">
+          {/* FORMULARIO DE SELECCIÓN */}
+          <div className="selection-form">
+            <label>Selecciona el repuesto:</label>
+            <select onChange={handlePartChange} value={selectedPart?.name || ""}>
+              <option value="">-- Seleccionar --</option>
+              {parts.map((part) => (
+                <option key={part.name} value={part.name}>
+                  {part.name} - {formatPrice(part.price)}
+                </option>
+              ))}
+            </select>
 
-        <label>Correo Electrónico:</label>
-        <input
-          type="email"
-          placeholder="Tu correo electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+            <label>Cantidad:</label>
+            <input
+              type="number"
+              min="1"
+              value={quantity}
+              onChange={handleQuantityChange}
+            />
 
-        <label>Dirección de Envío:</label>
-        <input
-          type="text"
-          placeholder="Tu dirección"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        />
+            <button type="button" onClick={handleAddToCart}>Agregar al carrito</button>
+          </div>
 
-        <button
-          type="button"
-          onClick={handleReserve}
-          disabled={cart.length === 0 || !phone || !email || !address}
-        >
-          Reservar
-        </button>
-      </form>
+          {/* CARRITO */}
+          {cart.length > 0 && (
+            <div className="cart-container">
+              <h3>Repuestos Seleccionados:</h3>
+              <ul>
+                {cart.map(item => (
+                  <li key={item.name} className="cart-item">
+                    <span>{item.name} ({item.quantity} x {formatPrice(item.price)})</span>
+                    <span>{formatPrice(item.subtotal)}</span>
+                    <button onClick={() => handleRemoveItem(item.name)}>Eliminar</button>
+                  </li>
+                ))}
+              </ul>
+              <p className="total-price">Total: {formatPrice(totalPrice)}</p>
+            </div>
+          )}
 
-      {/* MENSAJE FINAL */}
-      {message && <p className="booking-message">{message}</p>}
+          {/* FORMULARIO DE DATOS */}
+          <form className="booking-form" onSubmit={(e) => e.preventDefault()}>
+            <label>Teléfono:</label>
+            <input
+              type="tel"
+              placeholder="Tu número de teléfono"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+
+            <label>Correo Electrónico:</label>
+            <input
+              type="email"
+              placeholder="Tu correo electrónico"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <label>Dirección de Envío:</label>
+            <input
+              type="text"
+              placeholder="Tu dirección"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+
+            <button
+              type="button"
+              onClick={handleReserve}
+              disabled={cart.length === 0 || !phone || !email || !address}
+            >
+              Reservar
+            </button>
+          </form>
+
+          {/* MENSAJE */}
+          {message && <p className="booking-message">{message}</p>}
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,108 +1,102 @@
-/* Manteniendo el estilo base */
 .booking-container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: "Arial", sans-serif;
+  padding: 30px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
 }
 
 .booking-title {
   text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 30px;
 }
 
-/* FORMULARIOS Y INPUTS */
-.booking-form,
-.selection-form {
+.booking-content {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.booking-form input,
+.video-section {
+  flex: 1;
+  min-width: 200px;
+  max-width: 342px;
+}
+
+.video-parcial {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.selection-form,
+.booking-form,
+.cart-container {
+  margin-bottom: 20px;
+}
+
 .selection-form select,
-.selection-form input {
+.selection-form input,
+.booking-form input {
+  width: 100%;
   padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-.booking-form button,
-.selection-form button {
+.selection-form button,
+.booking-form button {
+  padding: 12px;
   background-color: #007bff;
   color: white;
-  border: none;
-  padding: 12px 0;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.booking-form button:hover,
-.selection-form button:hover {
-  background-color: #0056b3;
-}
-
-.booking-message {
-  margin-top: 15px;
-  text-align: center;
-  color: #ff4d4f;
   font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
 }
 
-/* CARRITO */
-.cart-container {
-  margin: 20px 0;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.cart-container h3 {
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 1.2rem;
+.selection-form button:hover,
+.booking-form button:hover {
+  background-color: #0056b3;
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
-  color: #555;
-}
-
-.cart-item:last-child {
-  border-bottom: none;
+  margin-bottom: 10px;
 }
 
 .cart-item button {
   background-color: #dc3545;
-  color: white;
   border: none;
-  padding: 5px 8px;
-  border-radius: 5px;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 12px;
-}
-
-.cart-item button:hover {
-  background-color: #a71d2a;
 }
 
 .total-price {
-  text-align: right;
   font-weight: bold;
-  font-size: 1.1rem;
-  color: #333;
-  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.booking-message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.1em;
 }

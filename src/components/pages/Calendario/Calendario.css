@@ -1,40 +1,55 @@
-/* Calendario.css */
-.calendar-container {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .calendar-section {
-    margin-bottom: 30px;
-  }
-  
-  .reservation-section {
-    margin-top: 30px;
-  }
-  
-  .reservations-list {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-  }
-  
-  .reservations-list h4 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-  
-  .reservations-list ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .reservations-list li {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-  }
-  
+.agenda-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+}
+
+.agenda-header {
+  display: grid;
+  grid-template-columns: 80px repeat(6, 1fr);
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.agenda-dia,
+.agenda-hora {
+  padding: 12px 8px;
+  border-right: 1px solid #ddd;
+}
+
+.agenda-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.agenda-row {
+  display: grid;
+  grid-template-columns: 80px repeat(6, 1fr);
+  border-bottom: 1px solid #eee;
+}
+
+.agenda-celda {
+  height: 50px;
+  border-right: 1px solid #eee;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.agenda-celda:hover {
+  background-color: #e6f7ff;
+}
+
+.seleccionado {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}

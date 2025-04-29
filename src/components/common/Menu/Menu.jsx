@@ -4,7 +4,6 @@ import "./Menu.css";
 const Menu = () => {
   return (
     <>
-      {/* Menú de navegación */}
       <nav className="navbar navbar-expand-lg menu navbar-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
@@ -23,27 +22,21 @@ const Menu = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              {/* Link a inicio */}
               <li className="nav-item">
                 <Link className="nav-link active" to="/">
                   Inicio
                 </Link>
               </li>
-              {/* Link a Calendario */}
               <li className="nav-item">
-                <Link className="nav-link" to="/Calendario">
-                  Calendario
+                <Link className="nav-link" to="/calendario">Agenda 
                 </Link>
               </li>
-              {/* Link a reservas */}
               <li className="nav-item">
                 <Link className="nav-link" to="/booking">
-                  Reservar Repuestos (Booking)
+                  Reservar Repuestos
                 </Link>
               </li>
             </ul>
-
-            {/* Buscador */}
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
@@ -59,7 +52,6 @@ const Menu = () => {
         </div>
       </nav>
 
-      {/* Contenido principal */}
       <main className="container mt-5" id="home">
         {/* Aquí puedes cargar el contenido de cada página por rutas */}
       </main>

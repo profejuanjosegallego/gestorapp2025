@@ -1,94 +1,94 @@
-// Calendario.jsx
-import { useState } from "react";
-import Calendar from 'react-calendar';
-import { Form, Button } from 'react-bootstrap';
-import 'react-calendar/dist/Calendar.css';
-import './Calendario.css';
+import  { useState } from 'react';
+import './calendarioAgenda.css';
 
-const Calendario = () => {
-  const [date, setDate] = useState(new Date());
-  const [selectedTime, setSelectedTime] = useState('');
-  const [reservations, setReservations] = useState([]);
+const CalendarioAgenda = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedHours, setSelectedHours] = useState([]);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
 
-  const handleDateChange = (newDate) => {
-    setDate(newDate);
+  // Función para manejar la selección de fecha
+  const handleDateSelect = (e) => {
+    setSelectedDate(e.target.value);
   };
 
-  const handleTimeChange = (event) => {
-    setSelectedTime(event.target.value);
-  };
-
-  const handleReservation = () => {
-    if (!selectedTime) {
-      alert('Por favor, selecciona un horario antes de reservar.');
-      return;
+  // Función para manejar la selección de horas
+  const handleHourSelect = (hour) => {
+    if (selectedHours.includes(hour)) {
+      setSelectedHours(selectedHours.filter(h => h !== hour));
+    } else {
+      setSelectedHours([...selectedHours, hour]);
     }
-
-    const reservation = {
-      date: date.toDateString(),
-      time: selectedTime,
-    };
-    setReservations([...reservations, reservation]);
-    alert(`Reserva hecha para el ${reservation.date} a las ${reservation.time}`);
   };
 
-  const renderTimeSlots = () => {
-    const timeSlots = [];
-    for (let hour = 8; hour <= 18; hour++) {
-      timeSlots.push(`${hour}:00`);
-    }
-    return timeSlots.map((time, index) => (
-      <option key={index} value={time}>
-        {time}
-      </option>
-    ));
+  // Función para manejar la reserva
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Reserva confirmada para ${name} en el día ${selectedDate} para las horas: ${selectedHours.join(', ')}`);
   };
 
   return (
-    <div className="calendar-container">
-      <h2>Calendario de Reservas</h2>
-      <Calendar
-        onChange={handleDateChange}
-        value={date}
-        minDate={new Date()}
-        tileDisabled={({ date }) => date.getDay() === 0} // Deshabilitar domingos
-      />
-      
-      <div className="reservation-section">
-        <h3>Hacer una Reserva</h3>
-        <Form>
-          <Form.Group controlId="formDate">
-            <Form.Label>Fecha seleccionada</Form.Label>
-            <Form.Control type="text" value={date.toDateString()} readOnly />
-          </Form.Group>
+    <div className="agenda-page">
+      {/* Video de fondo */}
+      <video className="video-background" autoPlay muted loop>
+        <source src="/src/assets/Videos/Fondo.mp4" type="video/mp4" />
+        Tu navegador no soporta el video de fondo.
+      </video>
 
-          <Form.Group controlId="formTime">
-            <Form.Label>Hora de la Reserva</Form.Label>
-            <Form.Control as="select" onChange={handleTimeChange} value={selectedTime}>
-              <option value="">Seleccione un horario</option>
-              {renderTimeSlots()}
-            </Form.Control>
-          </Form.Group>
+      {/* Contenido principal de la página */}
+      <div className="calendario-container">
+        <h2>Calendario de Reservas</h2>
 
-          <Button variant="primary" onClick={handleReservation}>
-            Reservar
-          </Button>
-        </Form>
-      </div>
+        {/* Selección de fecha */}
+        <input 
+          type="date" 
+          value={selectedDate} 
+          onChange={handleDateSelect} 
+        />
 
-      <div className="reservations-list">
-        <h4>Reservas Realizadas</h4>
-        <ul>
-          {reservations.map((res, index) => (
-            <li key={index}>
-              {res.date} - {res.time}
-            </li>
+        {/* Cuadro de horarios disponibles */}
+        <div className="horarios">
+          {/* Horarios de 8 AM a 6 PM */}
+          {Array.from({ length: 11 }, (_, i) => 8 + i).map(hour => (
+            <div 
+              key={hour} 
+              className={`hora ${selectedHours.includes(hour) ? 'seleccionada' : ''}`} 
+              onClick={() => handleHourSelect(hour)}
+            >
+              {hour}:00
+            </div>
           ))}
-        </ul>
+        </div>
+
+        {/* Formulario de reserva */}
+        <h3>Formulario de Reserva</h3>
+        <section className="formulario-reserva">
+          <input 
+            type="text" 
+            placeholder="Nombre completo" 
+            value={name} 
+            onChange={(e) => setName(e.target.value)} 
+          />
+          <div className="formulario-doble">
+            <input 
+              type="text" 
+              placeholder="Teléfono" 
+              value={phone} 
+              onChange={(e) => setPhone(e.target.value)} 
+            />
+            <input 
+              type="email" 
+              placeholder="Email" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+            />
+          </div>
+          <button onClick={handleSubmit}>Reservar</button>
+        </section>
       </div>
     </div>
   );
 };
 
-export default Calendario;
-    
+export default CalendarioAgenda;

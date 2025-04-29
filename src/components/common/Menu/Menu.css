@@ -1,6 +1,6 @@
 /* Estilos del menú */
 .menu {
-    background-color: #2b3339;
+    background-color: #000000;
 }
 
 /* Ajustes generales para ocupar toda la pantalla */
@@ -19,7 +19,7 @@ main {
 
 /* Footer fijo en la parte inferior */
 .footer {
-    background-color: #2b3339;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 15px 0;
