@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Booking from './pages/Booking';
 import Footer from './components/common/Footer/Footer';
 import About from './pages/About';
+import Espacios from './pages/Facilities';
 
 function App() {
   // State to control mobile menu visibility
@@ -74,11 +75,20 @@ function App() {
                   <li>
                     <Link
                       className="px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded text-sm font-medium transition-colors duration-200"
+                      to="/facilities"
+                    >
+                      Facilities
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded text-sm font-medium transition-colors duration-200"
                       to="/about"
                     >
                       About
                     </Link>
                   </li>
+
                 </ul>
               </div>
             </div>
@@ -107,6 +117,15 @@ function App() {
                 <li>
                   <Link
                     className="block px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded text-sm font-medium"
+                    to="/facilities"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Facilities
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="block px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded text-sm font-medium"
                     to="/about"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -123,6 +142,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/about" element={<About />} />
+            <Route path="/facilities" element={<Espacios />}></Route>
           </Routes>
         </main>
 

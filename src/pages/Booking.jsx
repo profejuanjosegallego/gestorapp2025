@@ -194,22 +194,7 @@ const Booking = () => {
     <div className="container py-8 max-w-screen-xl mx-auto px-4">
       <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">Book Your Facility</h1>
 
-      {/* Success message */}
-      {bookingSuccess && (
-        <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-8 rounded shadow-md">
-          <div className="flex items-center">
-            <div className="py-1">
-              <svg className="fill-current h-6 w-6 text-green-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z" />
-              </svg>
-            </div>
-            <div>
-              <p className="font-bold">Booking Successful!</p>
-              <p>Your reservation has been confirmed. You'll find it in your bookings list.</p>
-            </div>
-          </div>
-        </div>
-      )}
+
 
       {/* Navigation buttons */}
       <div className="flex justify-between mb-8">
@@ -234,8 +219,8 @@ const Booking = () => {
         <button
           onClick={toggleUserBookings}
           className={`flex items-center px-4 py-2 rounded-lg transition-colors ${showUserBookings
-              ? 'bg-blue-600 text-white'
-              : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+            ? 'bg-blue-600 text-white'
+            : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
             }`}
         >
           <BookOpen size={18} className="mr-2" />
@@ -499,6 +484,23 @@ const Booking = () => {
                           >
                             Confirm Booking
                           </button>
+
+                          {/* Success message */}
+                          {bookingSuccess && (
+                            <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-8 rounded shadow-md">
+                              <div className="flex items-center">
+                                <div className="py-1">
+                                  <svg className="fill-current h-6 w-6 text-green-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <p className="font-bold">Booking Successful!</p>
+                                  <p>Your reservation has been confirmed. You'll find it in your bookings list.</p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </form>
